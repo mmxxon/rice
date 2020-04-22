@@ -35,6 +35,14 @@ export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
 export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 export ANSIBLE_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/ansible/ansible.cfg"
 
+# My directories
+export SELF_HOME_DIR="$HOME/Folders"
+export SELF_MUSIC_DIR="${SELF_HOME_DIR:-$HOME/Folders}/music"
+export SELF_PICS_DIR="${SELF_HOME_DIR:-$HOME/Folders}/pics"
+export SELF_TORNT_DIR="${SELF_HOME_DIR:-$HOME/Folders}/torrents"
+export SELF_WORK_DIR="${SELF_HOME_DIR:-$HOME/Folders}/work"
+export SELF_SRC_DIR="${SELF_HOME_DIR:-$HOME/Folders}/sources"
+
 # Other program settings:
 export DICS="/usr/share/stardict/dic/"
 export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
