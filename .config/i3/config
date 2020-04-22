@@ -357,3 +357,4 @@ bindsym XF86Documents		exec $term -e lf ~/Documents
 ##bindsym XF86Battery		exec
 ##bindsym XF86Bluetooth		exec
 bindsym XF86WLAN		exec $netrefresh
+exec_always --no-startup-id notify-send 'Hi dude' -t 10000
