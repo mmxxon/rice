@@ -39,10 +39,12 @@ export ANSIBLE_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/ansible/ansible.cfg"
 export SELF_HOME_DIR="$HOME/Folders"
 export SELF_MUSIC_DIR="${SELF_HOME_DIR:-$HOME/Folders}/music"
 export SELF_PICS_DIR="${SELF_HOME_DIR:-$HOME/Folders}/pics"
-export SELF_TORNT_DIR="${SELF_HOME_DIR:-$HOME/Folders}/torrents"
 export SELF_WORK_DIR="${SELF_HOME_DIR:-$HOME/Folders}/work"
 export SELF_SRC_DIR="${SELF_HOME_DIR:-$HOME/Folders}/sources"
 export SELF_WALL_DIR="${SELF_PICS_DIR:-$HOME/Folders/pics}/wallpapers"
+export SELF_DLD_DIR="${SELF_HOME_DIR:-$HOME/Folders}/dloads"
+export SELF_DOCS_DIR="${SELF_HOME_DIR:-$HOME/Folders}/docs
+export SELF_TORNT_DIR="${SELF_DLD_DIR:-$HOME/Folders/dloads}/torrents"
 
 # Other program settings:
 export DICS="/usr/share/stardict/dic/"
