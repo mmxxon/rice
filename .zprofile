@@ -42,6 +42,7 @@ export SELF_PICS_DIR="${SELF_HOME_DIR:-$HOME/Folders}/pics"
 export SELF_TORNT_DIR="${SELF_HOME_DIR:-$HOME/Folders}/torrents"
 export SELF_WORK_DIR="${SELF_HOME_DIR:-$HOME/Folders}/work"
 export SELF_SRC_DIR="${SELF_HOME_DIR:-$HOME/Folders}/sources"
+export SELF_WALL_DIR="${SELF_PICS_DIR:-$HOME/Folders/pics}/wallpapers"
 
 # Other program settings:
 export DICS="/usr/share/stardict/dic/"
