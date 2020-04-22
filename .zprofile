@@ -43,7 +43,7 @@ export SELF_WORK_DIR="${SELF_HOME_DIR:-$HOME/Folders}/work"
 export SELF_SRC_DIR="${SELF_HOME_DIR:-$HOME/Folders}/sources"
 export SELF_WALL_DIR="${SELF_PICS_DIR:-$HOME/Folders/pics}/wallpapers"
 export SELF_DLD_DIR="${SELF_HOME_DIR:-$HOME/Folders}/dloads"
-export SELF_DOCS_DIR="${SELF_HOME_DIR:-$HOME/Folders}/docs
+export SELF_DOCS_DIR="${SELF_HOME_DIR:-$HOME/Folders}/docs"
 export SELF_TORNT_DIR="${SELF_DLD_DIR:-$HOME/Folders/dloads}/torrents"
 
 # Other program settings:
