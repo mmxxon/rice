@@ -29,14 +29,14 @@ use_console_editor = yes
 jump_to_now_playing_song_at_start = yes
 regular_expressions = "extended"
 mouse_support = no
-media_library_sort_by_mtime = yes
+browser_sort_mode = mtime
 
 colors_enabled = yes
 empty_tag_color = black
 header_window_color = white
 volume_color = magenta
 state_line_color = red
-state_flags_color = black
+state_flags_color = magenta
 main_window_color = cyan
 color1 = red
 color2 = magenta
