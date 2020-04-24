@@ -4,6 +4,7 @@ ncmpcpp_directory = "~/.config/ncmpcpp"
 lyrics_directory = "~/.local/share/lyrics"
 mpd_music_dir = "~/Folders/music"
 visualizer_type = "spectrum" (spectrum/wave)
+mpd_crossfade_time = 5
 visualizer_look = ●░
 visualizer_in_stereo = yes
 message_delay_time = 5
