@@ -11,6 +11,7 @@ selected_item_prefix = "* "
 song_columns_list_format = "(10)[white]{l} (30)[white]{b} (25)[cyan]{a} (10)[magenta]{t}"
 execute_on_song_change = notify-send -i "$SELF_PICS_DIR/icons/music.png" "Now Playing ♫" "$(mpc current)"
 playlist_show_remaining_time = yes
+allow_for_physical_item_deletion = yes
 autocenter_mode = yes
 centered_cursor = yes
 progressbar_look = "───"
@@ -27,6 +28,8 @@ cyclic_scrolling = yes
 use_console_editor = yes
 jump_to_now_playing_song_at_start = yes
 regular_expressions = "extended"
+mouse_support = no
+media_library_sort_by_mtime = yes
 
 colors_enabled = yes
 empty_tag_color = black
