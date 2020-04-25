@@ -8,3 +8,5 @@ vv	~/Folders/vids
 cf	${XDG_CONFIG_HOME:-$HOME/.config}
 sc	~/.local/bin
 mn	/mnt
+ww	~/Folders/work
+sr	~/Folders/sources
