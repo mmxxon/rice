@@ -69,15 +69,15 @@
 #def_key "space"
 #  toggle_visualization_type
 #
-#def_key "delete"
-#  delete_playlist_items
+#def_key "C-x"
+# delete_playlist_items
 #
-#def_key "delete"
-#  delete_browser_items
-#
-#def_key "delete"
-#  delete_stored_playlist
-#
+def_key "C-x"
+  delete_browser_items
+
+def_key "C-x"
+  delete_stored_playlist
+
 #def_key "right"
 #  next_column
 #
@@ -216,9 +216,9 @@
 #def_key "Z"
 #  shuffle
 #
-#def_key "x"
-#  toggle_crossfade
-#
+def_key "x"
+  toggle_crossfade
+
 #def_key "X"
 #  set_crossfade
 #
@@ -473,7 +473,7 @@ def_key "f"
   show_browser
 def_key "f"
   change_browse_mode
-def_key "x"
+def_key "C-x"
   delete_playlist_items
 def_key "P"
   show_playlist
