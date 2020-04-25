@@ -1,0 +1,40 @@
+[user]
+	email = xondev@vivaldi.net
+	name = Maksym Movchan
+	username = xon
+
+[core]
+	editor = nvim
+	excludesfile = ~/.gitignore
+
+[color]
+	ui = true
+
+[color "branch"]
+    current = yellow bold
+    local = cyan bold
+    remote = green bold
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+
+[color "status"]
+    added = green bold
+    changed = yellow bold
+    untracked = red bold
+
+[diff]
+  tool = vimdiff
+
+[url "https://github.com/"]
+    insteadOf = gh:
+
+[url "https://gist.github.com/"]
+    insteadOf = gist:
+
+[url "https://bitbucket.org/"]
+    insteadOf = bb:
