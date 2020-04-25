@@ -1,0 +1,11 @@
+set main-view = line-number:no,interval=5 id:no date:relative-compact author:no commit-title:yes,graph=v2,refs,overflow=no
+set main-view-date-format = "%m-%d-%Y %H:%M"
+set mouse                 = no
+
+bind main U !git pull --rebase --autostash %(remote) %(branch)
+bind status U !git pull --rebase --autostash %(remote) %(branch)
+bind refs U !git pull --rebase --autostash %(remote) %(branch)
+
+bind status P !git push origin
+
+bind generic B @sh -c "open 'https://'$(git remote -v | grep -Eo 'github.com[:/][^.]+' | head -1 | tr : /)'/commit/%(commit)'"
