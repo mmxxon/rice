@@ -6,7 +6,8 @@ m	~/Folders/music
 pp	~/Folders/pics
 vv	~/Folders/vids
 cf	${XDG_CONFIG_HOME:-$HOME/.config}
-sc	~/.local/bin
+cac      ${XDG_CACHE_HOME:-$HOME/.cache}
+sc 	~/.local/bin
 mn	/mnt
 ww	~/Folders/work
 sr	~/Folders/sources
