@@ -72,12 +72,12 @@
 #def_key "C-x"
 # delete_playlist_items
 #
-def_key "C-x"
-  delete_browser_items
-
-def_key "C-x"
-  delete_stored_playlist
-
+# def_key "C-x"
+#   delete_browser_items
+#
+# def_key "C-x"
+#   delete_stored_playlist
+#
 #def_key "right"
 #  next_column
 #
@@ -216,9 +216,9 @@ def_key "C-x"
 #def_key "Z"
 #  shuffle
 #
-def_key "x"
-  toggle_crossfade
-
+# def_key "x"
+#  toggle_crossfade
+#
 #def_key "X"
 #  set_crossfade
 #
@@ -473,7 +473,20 @@ def_key "f"
   show_browser
 def_key "f"
   change_browse_mode
-def_key "C-x"
+def_key "ctrl-x"
   delete_playlist_items
 def_key "P"
   show_playlist
+def_key "ctrl-x"
+  delete_browser_items
+def_key "ctrl-x"
+  delete_stored_playlist
+def_key "x"
+  toggle_crossfade
+def_key "K"
+  select_item
+  scroll_up
+def_key "J"
+  select_item
+  scroll_down
+
