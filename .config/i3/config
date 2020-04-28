@@ -7,7 +7,7 @@
 # export TERMINAL="st"
 
 # #---Basic Definitions---# #
-set $inner_gaps 15
+set $inner_gaps 10
 set $outer_gaps 0
 set $term --no-startup-id $TERMINAL
 set $mod Mod4
@@ -43,10 +43,10 @@ bar {
 }
 
 # #---Basic Bindings---# #
-bindsym $mod+Return 		exec $term
+bindsym $mod+Return		exec $term
 bindsym $mod+Shift+Return	exec --no-startup-id samedir
 
-bindsym $mod+Shift+space 	floating toggle
+bindsym $mod+Shift+space	floating toggle
 bindsym $mod+space		focus mode_toggle
 
 bindsym $mod+Escape		workspace prev
@@ -75,7 +75,7 @@ bindsym $mod+Shift+w		exec $term -e nmtui
 bindsym $mod+e			exec $term -e neomutt && pkill -RTMIN+12 i3blocks
 bindsym $mod+Shift+e		exec --no-startup-id tutorialvids
 
-bindsym $mod+r 			exec $term -e lf
+bindsym $mod+r			exec $term -e lf
 bindsym $mod+Shift+r		exec --no-startup-id winresize
 
 bindsym $mod+t			split toggle
@@ -87,7 +87,7 @@ bindsym $mod+Shift+y		exec --no-startup-id i3resize left
 bindsym $mod+u			exec --no-startup-id ddspawn tmuxdd
 bindsym $mod+Shift+u		exec --no-startup-id i3resize down
 
-bindsym $mod+i 			exec $term -e htop
+bindsym $mod+i			exec $term -e htop
 bindsym $mod+Shift+i		exec --no-startup-id i3resize up
 
 bindsym $mod+o			sticky toggle
@@ -148,7 +148,7 @@ bindsym $mod+Shift+b		floating toggle; sticky toggle; exec --no-startup-id hover
 
 bindsym $mod+Shift+n		floating toggle; sticky toggle; exec --no-startup-id hover right
 
-bindsym $mod+m 			exec --no-startup-id $term -e ncmpcpp
+bindsym $mod+m			exec --no-startup-id $term -e ncmpcpp
 bindsym $mod+Shift+m		exec --no-startup-id pulsemixer --toggle-mute && pkill -RTMIN+10 i3blocks
 
 # #---Workspace Bindings---# #
@@ -221,7 +221,7 @@ for_window [title="mpvfloat"] border pixel 0
 no_focus [title="mpvfloat"]
 
 # #---Function Buttons---# #
-bindsym $mod+F1		exec --no-startup-id groff -mom ${XDG_DATA_HOME:-$HOME/.local/share}/larbs/readme.mom -Tpdf | zathura -
+# bindsym $mod+F1		exec --no-startup-id groff -mom ${XDG_DATA_HOME:-$HOME/.local/share}/larbs/readme.mom -Tpdf | zathura -
 bindsym $mod+F2		restart
 bindsym $mod+F3		exec --no-startup-id displayselect
 bindsym $mod+F4		exec --no-startup-id prompt "Hibernate computer?" "$hibernate"
@@ -244,30 +244,30 @@ bindsym $mod+Ctrl+Down		move workspace to output down
 bindsym $mod+Up			focus up
 bindsym $mod+Shift+Up		move up
 bindsym $mod+Ctrl+Up		move workspace to output up
-bindsym $mod+Right 		focus right
-bindsym $mod+Shift+Right 	move right
+bindsym $mod+Right		focus right
+bindsym $mod+Shift+Right	move right
 bindsym $mod+Ctrl+Right		move workspace to output right
 
 # #---Media Keys---# #
 # Volume keys
 bindsym $mod+plus		exec --no-startup-id pulsemixer --change-volume +5 && pkill -RTMIN+10 i3blocks
 bindsym $mod+Shift+plus		exec --no-startup-id pulsemixer --change-volume +15 && pkill -RTMIN+10 i3blocks
-bindsym $mod+minus 		exec --no-startup-id pulsemixer --change-volume -5 && pkill -RTMIN+10 i3blocks
+bindsym $mod+minus		exec --no-startup-id pulsemixer --change-volume -5 && pkill -RTMIN+10 i3blocks
 bindsym $mod+Shift+minus	exec --no-startup-id pulsemixer --change-volume -15 && pkill -RTMIN+10 i3blocks
-bindsym $mod+less 		exec --no-startup-id mpc prev
+bindsym $mod+less		exec --no-startup-id mpc prev
 bindsym $mod+Shift+less		exec --no-startup-id mpc seek 0%
 bindsym $mod+greater		exec --no-startup-id mpc next
 bindsym $mod+Shift+greater	exec --no-startup-id mpc next
 
 # For advancing forward/backward in an mpd song
-bindsym $mod+bracketleft 	exec --no-startup-id mpc seek -10
-bindsym $mod+Shift+bracketleft 	exec --no-startup-id mpc seek -120
-bindsym $mod+bracketright 	exec --no-startup-id mpc seek +10
+bindsym $mod+bracketleft	exec --no-startup-id mpc seek -10
+bindsym $mod+Shift+bracketleft	exec --no-startup-id mpc seek -120
+bindsym $mod+bracketright		exec --no-startup-id mpc seek +10
 bindsym $mod+Shift+bracketright exec --no-startup-id mpc seek +120
 
 # For screenshots and recording
-bindsym Print 			exec --no-startup-id maim pic-full-"$(date '+%y%m%d-%H%M-%S').png"
-bindsym Shift+Print 		exec --no-startup-id maimpick
+bindsym Print			exec --no-startup-id maim pic-full-"$(date '+%y%m%d-%H%M-%S').png"
+bindsym Shift+Print		exec --no-startup-id maimpick
 bindsym $mod+Print		exec --no-startup-id dmenurecord
 bindsym $mod+Scroll_Lock	exec --no-startup-id "killall screenkey || screenkey"
 bindsym $mod+Delete		exec $stoprec
@@ -351,7 +351,7 @@ bindsym XF86Display		exec --no-startup-id displayselect
 ##bindsym XF86Reply		exec
 ##bindsym XF86MailForward	exec
 ##bindsym XF86Save		exec
-bindsym XF86Documents		exec $term -e lf ~/Documents
+bindsym XF86Documents		exec $term -e lf $SELF_DOCS_DIR
 ##bindsym XF86Battery		exec
 ##bindsym XF86Bluetooth		exec
 bindsym XF86WLAN		exec $netrefresh

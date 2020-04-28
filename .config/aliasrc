@@ -35,7 +35,8 @@ alias \
 	xi="sudo xbps-install" \
 	xr="sudo xbps-remove -R" \
 	xq="xbps-query" \
-	z="zathura"
+	z="zathura" \
+	qtc="qtcreator"
 
 # Some other stuff
 alias \
