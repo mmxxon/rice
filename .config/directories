@@ -7,7 +7,11 @@ pp	~/Folders/pics
 vv	~/Folders/vids
 cf	${XDG_CONFIG_HOME:-$HOME/.config}
 cac      ${XDG_CACHE_HOME:-$HOME/.cache}
+<<<<<<< HEAD
 sc	~/.local/bin
+=======
+sc 	~/.local/bin
+>>>>>>> 833d5fe9b7ced38d8484844977e7ec8347c06fb4
 mn	/mnt
 ww	~/Folders/work
 sr	~/Folders/sources

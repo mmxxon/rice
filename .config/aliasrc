@@ -5,10 +5,9 @@ command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
 
 # Verbosity and settings that you pretty much just always are going to want.
 alias \
-	bat="cat /sys/class/power_supply/BAT?/capacity" \
 	cp="cp -iv" \
 	mv="mv -iv" \
-	rm="rm -v" \
+	rm="rm -vI" \
 	mkd="mkdir -pv" \
 	yt="youtube-dl --add-metadata -i" \
 	yta="yt -x -f bestaudio/best" \
@@ -35,12 +34,15 @@ alias \
 	xi="sudo xbps-install" \
 	xr="sudo xbps-remove -R" \
 	xq="xbps-query" \
+<<<<<<< HEAD
 	z="zathura" \
 	qtc="qtcreator"
+=======
+	z="zathura"
+>>>>>>> 833d5fe9b7ced38d8484844977e7ec8347c06fb4
 
-# Some other stuff
 alias \
 	magit="nvim -c MagitOnly" \
 	ref="shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/zshnameddirrc" \
 	weath="less -S ${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport" \
-	tmux="tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf"
+	tmux="tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf" \
