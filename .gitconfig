@@ -2,6 +2,7 @@
 	email = xondev@vivaldi.net
 	name = Maksym Movchan
 	username = xon
+	signingkey = xondev@vivaldi.net
 
 [core]
 	editor = nvim
@@ -30,6 +31,10 @@
 [diff]
   tool = vimdiff
 
+[github]
+  user = xon-dev
+  token = token
+
 [url "https://github.com/"]
     insteadOf = gh:
 
@@ -38,3 +43,12 @@
 
 [url "https://bitbucket.org/"]
     insteadOf = bb:
+[tig]
+    line-graphics = utf-8
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[committer]
+	name = Maksym Movchan
