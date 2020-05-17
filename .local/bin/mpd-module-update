@@ -2,7 +2,11 @@
 
 # This loop will update the mpd statusbar module whenever a command changes the
 # music player's status. mpd must be running on X's start for this to work.
+filter() {
+	sed "/^volume:/d" | tac | sed -e "s/\\&/&amp;/g;s/\\[paused\\].*/\\[paused\\] /g;s/\\[playing\\].*//" | tr -d '\n' | sed -e "s/\..*$//g" \
+	|| sed "/^volume:/d" | tac | sed -e "s/\\&/&amp;/g;s/\\[paused\\].*/<span color=\"gray\" font_style=\"italic\">/g;s/\\[playing\\].*/<span>/g" | tr -d '\n' | sed -e "s/$/<\\/span>\n/g"
+	}
 
 while : ; do
-	mpc idle >/dev/null && pkill -RTMIN+11 "${STATUSBAR:-dwmblocks}" || break
+	mpc idle >/dev/null && notify-send "$(mpc status | filter)" && pkill -RTMIN+11 "${STATUSBAR:-dwmblocks}" || break
 done
