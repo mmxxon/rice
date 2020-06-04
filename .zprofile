@@ -25,7 +25,6 @@ export LESSHISTFILE="-"
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
 export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/inputrc"
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
-export ALSA_CONFIG_PATH="$XDG_CONFIG_HOME/alsa/asoundrc"
 #export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export WINEPREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/wineprefixes/default"
 export KODI_DATA="${XDG_DATA_HOME:-$HOME/.local/share}/kodi"
@@ -35,18 +34,6 @@ export ANDROID_SDK_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/android"
 export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
 export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 export ANSIBLE_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/ansible/ansible.cfg"
-
-# My directories
-export SELF_HOME_DIR="$HOME/Folders"
-export SELF_MUSIC_DIR="${SELF_HOME_DIR:-$HOME/Folders}/music"
-export SELF_PICS_DIR="${SELF_HOME_DIR:-$HOME/Folders}/pics"
-export SELF_WORK_DIR="${SELF_HOME_DIR:-$HOME/Folders}/work"
-export SELF_VIDS_DIR="${SELF_HOME_DIR:-$HOME/Folders/}/vids"
-export SELF_SRC_DIR="${SELF_HOME_DIR:-$HOME/Folders}/sources"
-export SELF_WALL_DIR="${SELF_PICS_DIR:-$HOME/Folders/pics}/wallpapers"
-export SELF_DLD_DIR="${SELF_HOME_DIR:-$HOME/Folders}/dloads"
-export SELF_DOCS_DIR="${SELF_HOME_DIR:-$HOME/Folders}/docs"
-export SELF_TORNT_DIR="${SELF_DLD_DIR:-$HOME/Folders/dloads}/torrents"
 
 # Other program settings:
 export DICS="/usr/share/stardict/dic/"
@@ -132,7 +119,7 @@ ex=🎯:\
 [ ! -f ${XDG_CONFIG_HOME:-$HOME/.config}/shortcutrc ] && shortcuts >/dev/null 2>&1 &
 
 # Start graphical server on tty1 if not already running.
-[ "$(tty)" = "/dev/tty1" ] && ! ps -e | grep -qw Xorg && exec startx
+[ "$(tty)" = "/dev/tty1" ] && ! pidof Xorg >/dev/null 2>&1  && exec startx
 
 # Switch escape and caps if tty and no passwd required:
-sudo -n loadkeys ${XDG_DATA_HOME:-$HOME/.local/share}/larbs/ttymaps.kmap 2>/dev/null
+# sudo -n loadkeys ${XDG_DATA_HOME:-$HOME/.local/share}/larbs/ttymaps.kmap 2>/dev/null

@@ -34,12 +34,7 @@ alias \
 	xi="sudo xbps-install" \
 	xr="sudo xbps-remove -R" \
 	xq="xbps-query" \
-<<<<<<< HEAD
-	z="zathura" \
-	qtc="qtcreator"
-=======
 	z="zathura"
->>>>>>> 833d5fe9b7ced38d8484844977e7ec8347c06fb4
 
 alias \
 	magit="nvim -c MagitOnly" \
