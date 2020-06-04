@@ -2,7 +2,7 @@
 
 ncmpcpp_directory = "$XDG_CONFIG_HOME/ncmpcpp"
 lyrics_directory = "$XDG_DATA_HOME/lyrics"
-mpd_music_dir = "~m"
+mpd_music_dir = "~/Music"
 visualizer_type = "spectrum" (spectrum/wave)
 mpd_crossfade_time = 5
 visualizer_look = ●░
