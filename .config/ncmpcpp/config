@@ -1,8 +1,8 @@
 # vim: filetype=conf
 
-ncmpcpp_directory = "~/.config/ncmpcpp"
-lyrics_directory = "~/.local/share/lyrics"
-mpd_music_dir = "~/Folders/music"
+ncmpcpp_directory = "$XDG_CONFIG_HOME/ncmpcpp"
+lyrics_directory = "$XDG_DATA_HOME/lyrics"
+mpd_music_dir = "~m"
 visualizer_type = "spectrum" (spectrum/wave)
 mpd_crossfade_time = 5
 visualizer_look = ●░
@@ -10,7 +10,7 @@ visualizer_in_stereo = yes
 message_delay_time = 5
 selected_item_prefix = "* "
 song_columns_list_format = "(10)[white]{l} (30)[white]{b} (25)[cyan]{a} (10)[magenta]{t}"
-execute_on_song_change = notify-send -i "$SELF_PICS_DIR/icons/music.png" "Now Playing ♫" "$(mpc current)"
+execute_on_song_change = notify-send -i "~pp/icons/music.png" "Now Playing ♫" "$(mpc current)"
 playlist_show_remaining_time = yes
 allow_for_physical_item_deletion = yes
 autocenter_mode = yes
