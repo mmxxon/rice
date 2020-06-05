@@ -1,7 +1,7 @@
 # vim: filetype=conf
 
-ncmpcpp_directory = "$XDG_CONFIG_HOME/ncmpcpp"
-lyrics_directory = "$XDG_DATA_HOME/lyrics"
+ncmpcpp_directory = "~/.config/ncmpcpp"
+lyrics_directory = "~/.local/share/lyrics"
 mpd_music_dir = "~/Music"
 visualizer_type = "spectrum" (spectrum/wave)
 mpd_crossfade_time = 5
@@ -31,6 +31,7 @@ jump_to_now_playing_song_at_start = yes
 regular_expressions = "extended"
 mouse_support = no
 browser_sort_mode = mtime
+lyrics_fetchers = genius, lyricwiki, azlyrics, sing365, lyricsmania, metrolyrics, justsomelyrics, jahlyrics, plyrics, tekstowo, zeneszoveg, internet
 
 colors_enabled = yes
 empty_tag_color = black

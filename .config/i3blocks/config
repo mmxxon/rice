@@ -1,5 +1,5 @@
 command=~/.local/bin/statusbar/$BLOCK_NAME
-separator_block_width=15
+separator_block_width=10
 markup=pango
 
 [record]
@@ -12,11 +12,15 @@ label=🎼
 interval=once
 signal=11
 
+#[news]
+#interval=once
+#signal=6
+
 #[iplocate]
 #interval=30
 
 [pacpackages]
-interval=once
+interval=36000
 signal=8
 
 [torrent]
@@ -57,5 +61,11 @@ interval=5
 label=📅
 interval=30
 
+[moonphase]
+interval=18000
+
 [internet]
 interval=10
+
+#[help-icon]
+#interval=once
