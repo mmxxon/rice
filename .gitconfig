@@ -31,10 +31,6 @@
 [diff]
   tool = vimdiff
 
-[github]
-  user = xon-dev
-  token = token
-
 [url "https://github.com/"]
     insteadOf = gh:
 
@@ -52,3 +48,5 @@
 	required = true
 [committer]
 	name = Maksym Movchan
+[credential]
+	helper = libsecret
