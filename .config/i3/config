@@ -30,10 +30,21 @@ for_window [instance="dropdown_*"] move position center
 bar {
 	font pango:mono 10
 	status_command i3blocks
-	position top
-	mode dock
+    colors {
+	separator #00afff
+	background #131111
+	statusline #839496
+	focused_workspace #eeeeee #131111 #00afff
+        active_workspace #eeeeee #131111 #00afff
+	inactive_workspace #131111 #6c6c6c #131111
+	urgent_workspace #ba2338 #ba2338 #131111
+    } position top mode dock
 	modifier None
 }
+client.focused #6c71c4 #b0b31a #fdf6e3 #dfe572
+client.focused_inactive #630311 #073642 #eee8d5 #6c71c4
+client.unfocused #073642 #073642 #93a1a1 #586e75
+client.urgent #d33682 #d33682 #fdf6e3 #dc322f
 
 # #---Basic Bindings---# #
 bindsym $mod+Return		exec $term
