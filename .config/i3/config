@@ -41,10 +41,10 @@ bar {
     } position top mode dock
 	modifier None
 }
-client.focused #6c71c4 #b0b31a #fdf6e3 #dfe572
+client.focused #6c71c4 #095d4a #fdf6e3 #64d7d4
 client.focused_inactive #630311 #073642 #eee8d5 #6c71c4
 client.unfocused #073642 #073642 #93a1a1 #586e75
-client.urgent #d33682 #d33682 #fdf6e3 #dc322f
+client.urgent #d33682 #530615 #fdf6e3 #ed899d
 
 # #---Basic Bindings---# #
 bindsym $mod+Return		exec $term
