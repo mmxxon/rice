@@ -5,7 +5,9 @@ set ifs "\n"
 set scrolloff 10
 set color256
 set icons
-set period 1
+set hidden
+set ratios 1:2:3
+set info size
 
 # Vars that depend on environmental variables
 $lf -remote "send $id set previewer ${XDG_CONFIG_HOME:-$HOME/.config}/lf/scope"
@@ -21,6 +23,7 @@ cmd open ${{
 	audio/*) mpv $f ;;
 	video/*) setsid mpv $f -quiet >/dev/null 2>&1 & ;;
 	application/pdf) setsid zathura $fx >/dev/null 2>&1 & ;;
+	application/epub+zip) setsid epy $fx;;
         *) for f in $fx; do setsid $OPENER $f >/dev/null 2>&1 & done;;
     esac
 }}

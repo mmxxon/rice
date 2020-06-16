@@ -39,7 +39,7 @@ bar {
 	inactive_workspace #131111 #6c6c6c #131111
 	urgent_workspace #ba2338 #ba2338 #131111
     } position top mode dock
-	modifier None
+    modifier None
 }
 client.focused #6c71c4 #095d4a #fdf6e3 #64d7d4
 client.focused_inactive #630311 #073642 #eee8d5 #6c71c4

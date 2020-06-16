@@ -1,0 +1,2 @@
+.config/wallpapers/ filter=lfs diff=lfs merge=lfs -text
+.config/calcurse/alarm.wav filter=lfs diff=lfs merge=lfs -text
