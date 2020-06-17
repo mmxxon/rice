@@ -28,10 +28,11 @@ for_window [instance="dropdown_*"] move position center
 
 # #---Dock---# #
 bar {
-	font pango:mono 10
-	status_command i3blocks
+    separator_symbol "¦"
+    font pango:mono 10
+    status_command i3blocks
     colors {
-	separator #00afff
+	separator #FF0000
 	background #131111
 	statusline #839496
 	focused_workspace #eeeeee #131111 #00afff

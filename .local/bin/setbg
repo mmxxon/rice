@@ -1,3 +1,4 @@
 #!/bin/sh
 
-wal -i ~/pics/walls
+wal -ni ~/pics/walls
+~/.local/bin/pacwall -DWLS 1920x1080 -r 0.6

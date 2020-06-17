@@ -1,7 +1,7 @@
 command=~/.local/bin/statusbar/$BLOCK_NAME
 align=center
 color=#666666
-separator_block_width=10
+separator_block_width=15
 markup=pango
 
 [record]
