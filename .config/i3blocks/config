@@ -19,7 +19,7 @@ color=#EAEAEA
 #interval=30
 
 [pacpackages]
-interval=36000
+interval=180
 signal=8
 
 [torrent]
