@@ -1,4 +1,4 @@
 #!/bin/sh
 
 wal -ni ~/pics/walls || exit 1
-pacwall -WL -o /home/xon/pics/pacwall.png || exit 1
+pacwall -WL -r 1.6 || exit 1
