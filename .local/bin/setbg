@@ -1,4 +1,4 @@
 #!/bin/sh
 
-wal -ni ~/pics/walls
-~/.local/bin/pacwall -DWLS 1920x1080 -r 0.6
+wal -ni ~/pics/walls || exit 1
+pacwall -DWLS 1920x1080 -o /home/xon/pics/pacwall.png || exit 1

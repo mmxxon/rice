@@ -1,1 +1,0 @@
-/home/xon/.config/zsh/.zprezto/runcoms/zlogin
