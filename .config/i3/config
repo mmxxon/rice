@@ -78,7 +78,7 @@ bindsym $mod+w			exec --no-startup-id $BROWSER
 bindsym $mod+Shift+w		exec $term -e nmtui
 
 bindsym $mod+e			exec $term -e neomutt && pkill -RTMIN+12 i3blocks
-#bindsym $mod+Shift+e		exec --no-startup-id tutorialvids
+# bindsym $mod+Shift+e
 
 bindsym $mod+r			exec $term -e lf
 bindsym $mod+Shift+r		exec --no-startup-id winresize
@@ -86,7 +86,7 @@ bindsym $mod+Shift+r		exec --no-startup-id winresize
 bindsym $mod+t			split toggle
 bindsym $mod+Shift+t		gaps inner current set $inner_gaps; gaps outer current set $outer_gaps
 
-bindsym $mod+y			exec $term -e calcurse
+bindsym $mod+y			exec --no-startup-id st -e calcurse
 bindsym $mod+Shift+y		exec --no-startup-id i3resize left
 
 bindsym $mod+u			exec --no-startup-id ddspawn tmuxdd
@@ -145,13 +145,15 @@ bindsym $mod+Shift+x		exec --no-startup-id prompt "Shutdown computer?" "$shutdow
 bindsym $mod+c			exec --no-startup-id cabl
 bindsym $mod+Shift+c		exec --no-startup-id camtoggle
 
-bindsym $mod+v			exec --no-startup-id $term -e $EDITOR -c "VimwikiIndex"
+# bindsym $mod+v			exec --no-startup-id notify-send "$(khal list -f '' -df '{bold}{name}' tomorrow)" "$(khal list -f '{title}' -df '' tomorrow)"
+#bindsym $mod+v			exec --no-startup-id $term -e $EDITOR -c "VimwikiIndex"
 #bindsym $mod+Shift+v
 
 bindsym $mod+b			bar mode toggle
 bindsym $mod+Shift+b		floating toggle; sticky toggle; exec --no-startup-id hover left
 
 bindsym $mod+Shift+n		floating toggle; sticky toggle; exec --no-startup-id hover right
+# bindsym $mod+n			exec --no-startup-id notify-send "$(khal list -f '' -df '{bold}{name}' today today)" "$(khal list -f '{title}' -df '' today today)"
 
 bindsym $mod+m			exec --no-startup-id $term -e ncmpcpp
 bindsym $mod+Shift+m		exec --no-startup-id pulsemixer --toggle-mute && pkill -RTMIN+10 i3blocks
@@ -360,4 +362,3 @@ bindsym XF86Documents		exec $term -e lf ~/docs
 ##bindsym XF86Battery		exec
 ##bindsym XF86Bluetooth		exec
 bindsym XF86WLAN		exec $netrefresh
-exec_always --no-startup-id notify-send 'Hi dude' -t 10000
