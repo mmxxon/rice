@@ -1,48 +1,73 @@
+# ---- Global ----
 [user]
 	email = xondev@vivaldi.net
 	name = Maksym Movchan
 	username = xon
 	signingkey = xondev@vivaldi.net
-
-[commit]
-	cleanup = strip
-	template = ~/.gitmessage
-
+[credential]
+	helper = libsecret
 [core]
 	editor = nvim
 	excludesfile = ~/.gitignore
 
+
+# ---- Colors ----
 [color]
 	ui = true
-
 [color "branch"]
     current = yellow bold
     local = cyan bold
     remote = green bold
-
 [color "diff"]
     meta = yellow bold
     frag = magenta bold
     old = red bold
     new = green bold
     whitespace = red reverse
-
 [color "status"]
     added = green bold
     changed = yellow bold
     untracked = red bold
 
-[diff]
-  tool = vimdiff
 
+# ---- Remote ----
 [url "https://github.com/"]
     insteadOf = gh:
-
 [url "https://gist.github.com/"]
     insteadOf = gist:
-
 [url "https://bitbucket.org/"]
     insteadOf = bb:
+
+
+# ---- Commits ----
+[commit]
+	cleanup = strip
+	template = ~/.gitmessage
+[committer]
+	name = Maksym Movchan
+
+
+# ---- Diff ----
+[diff]
+	tool = nvimdiff
+[difftool]
+	prompt = false
+[difftool "nvimdiff"]
+	cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
+
+
+# ---- Merge ----
+[merge]
+	tool = diffconflicts
+	conflictstyle = diff3
+[mergetool]
+	keepBackup = false
+[mergetool "diffconflicts"]
+	cmd = nvim -c DiffConflicts \"$MERGED\" \"$BASE\" \"$LOCAL\" \"$REMOTE\"
+	trustExitCode = true
+
+
+# ---- Foreign tools ----
 [tig]
     line-graphics = utf-8
 [filter "lfs"]
@@ -50,12 +75,3 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[committer]
-	name = Maksym Movchan
-[credential]
-	helper = libsecret
-[merge]
-	tool = vimdiff
-	conflictstyle = diff3
-[mergetool]
-	prompt = false
