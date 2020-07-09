@@ -6,6 +6,7 @@
 
 [commit]
 	cleanup = strip
+	template = ~/.gitmessage
 
 [core]
 	editor = nvim
