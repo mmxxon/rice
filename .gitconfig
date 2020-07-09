@@ -54,3 +54,8 @@
 	name = Maksym Movchan
 [credential]
 	helper = libsecret
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[mergetool]
+	prompt = false
