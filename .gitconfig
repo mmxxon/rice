@@ -4,6 +4,9 @@
 	username = xon
 	signingkey = xondev@vivaldi.net
 
+[commit]
+	cleanup = strip
+
 [core]
 	editor = nvim
 	excludesfile = ~/.gitignore
