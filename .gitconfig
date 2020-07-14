@@ -1,19 +1,19 @@
 # ---- Global ----
 [user]
-	email = xondev@vivaldi.net
-	name = Maksym Movchan
-	username = xon
-	signingkey = xondev@vivaldi.net
+    email = xondev@vivaldi.net
+    name = Maksym Movchan
+    username = xon
+    signingkey = xondev@vivaldi.net
 [credential]
-	helper = libsecret
+    helper = libsecret
 [core]
-	editor = nvim
-	excludesfile = ~/.gitignore
+    editor = nvim
+    excludesfile = ~/.gitignore
 
 
 # ---- Colors ----
 [color]
-	ui = true
+    ui = true
 [color "branch"]
     current = yellow bold
     local = cyan bold
@@ -41,37 +41,37 @@
 
 # ---- Commits ----
 [commit]
-	cleanup = strip
-	template = ~/.gitmessage
+    cleanup = strip
+    template = ~/.gitmessage
 [committer]
-	name = Maksym Movchan
+    name = Maksym Movchan
 
 
 # ---- Diff ----
 [diff]
-	tool = nvimdiff
+    tool = nvimdiff
 [difftool]
-	prompt = false
+    prompt = false
 [difftool "nvimdiff"]
-	cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
+    cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
 
 
 # ---- Merge ----
 [merge]
-	tool = diffconflicts
-	conflictstyle = diff3
+    tool = diffconflicts
+    conflictstyle = diff3
 [mergetool]
-	keepBackup = false
+    keepBackup = false
 [mergetool "diffconflicts"]
-	cmd = nvim -c DiffConflicts \"$MERGED\" \"$BASE\" \"$LOCAL\" \"$REMOTE\"
-	trustExitCode = true
+    cmd = nvim -c DiffConflicts \"$MERGED\" \"$BASE\" \"$LOCAL\" \"$REMOTE\"
+    trustExitCode = true
 
 
 # ---- Foreign tools ----
 [tig]
     line-graphics = utf-8
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true

@@ -29,7 +29,7 @@ cyclic_scrolling = yes
 use_console_editor = yes
 jump_to_now_playing_song_at_start = yes
 regular_expressions = "extended"
-mouse_support = no
+# mouse_support = no
 browser_sort_mode = mtime
 lyrics_fetchers = genius, lyricwiki, azlyrics, sing365, lyricsmania, metrolyrics, justsomelyrics, jahlyrics, plyrics, tekstowo, internet
 

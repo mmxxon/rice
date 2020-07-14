@@ -1,5 +1,4 @@
-# the default configuration file is https://github.com/jonas/tig/blob/master/tigrc
-
+# ---- View ----
 set main-view             = line-number:no,interval=5 id:yes date:default author:full,width=0,maxwidth=10 commit-title:yes,graph,refs,overflow=no
 set main-view-date        = custom
 set main-view-date-format = "%Y-%m-%d %H:%M"
@@ -8,24 +7,23 @@ set mouse                 = yes
 set mouse-scroll          = 5
 set refresh-mode          = periodic
 set refresh-interval      = 3
-set tab-size              = 4
+set tab-size              = 2
 # show untracked files in one dir as a dir like `git status` instead of multiple files
 set status-show-untracked-dirs = false
 
-# bindings priorities: view->generic->default
+# ---- Main Bindings ----
 bind generic    E    !>sh -c "nvim $XDG_CONFIG_HOME/tig/config"
 bind generic    S    view-stage
 bind generic    g    none # disable single g
 bind generic    gs   view-grep
 bind generic    gg   move-first-line
 bind generic    G    move-last-line
+bind main       G    move-last-line # overwrite the default
 bind generic    p    none # disable single p for pager(default)
 bind generic    pl   !git pull
 bind generic    pl   !git pull %(remote)
 bind generic    pu   !<git push
 bind generic    pU   !<git push -u %(remote) %(repo:head)
-bind generic    v    :source ~/.tigrc
-bind main       G    move-last-line # overwrite the default
 bind generic    <Ctrl-f>   scroll-page-down
 bind generic    <Ctrl-b>   scroll-page-up
 
@@ -113,6 +111,19 @@ bind diff    H      ?git reset --hard %(commit)
 bind refs    H      ?git reset --hard %(branch)
 bind status  H      ?git reset --hard HEAD
 
+#Reset --soft
+bind main    R      ?git reset --soft %(commit)
+bind diff    R      ?git reset --soft %(commit)
+bind refs    R      ?git reset --soft %(branch)
+bind status  R      ?git reset --soft HEAD
+
+#Rebase
+# bind main    R      ?git rebase %(branch)
+# bind diff    R      ?git rebase %(branch)
+# bind refs    R      ?git rebase %(branch)
+# bind main    <Esc>r ?git rebase %(commit)
+# bind diff    <Esc>r ?git rebase %(commit)
+
 #Checkout
 bind main    =      ?git checkout %(branch)
 bind refs    =      ?git checkout %(branch)
@@ -124,13 +135,6 @@ bind diff    M      ?git merge %(branch)
 bind refs    M      ?git merge %(branch)
 bind main    <Esc>m ?git merge %(commit)
 bind diff    <Esc>m ?git merge %(commit)
-
-#Rebase
-# bind main    R      ?git rebase %(branch)
-# bind diff    R      ?git rebase %(branch)
-# bind refs    R      ?git rebase %(branch)
-# bind main    <Esc>r ?git rebase %(commit)
-# bind diff    <Esc>r ?git rebase %(commit)
 
 #Rebase -i
 bind main    I      ?git rebase -i %(branch)
