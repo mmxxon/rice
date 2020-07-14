@@ -22,8 +22,8 @@ bind main       G    move-last-line # overwrite the default
 bind generic    p    none # disable single p for pager(default)
 bind generic    pl   !git pull -S
 bind generic    pl   !git pull %(remote) -S
-bind generic    pu   !<git push --sign
-bind generic    pU   !<git push -u %(remote) %(repo:head) --sign
+bind generic    pu   !<git push
+bind generic    pU   !<git push -u %(remote) %(repo:head)
 bind generic    <Ctrl-f>   scroll-page-down
 bind generic    <Ctrl-b>   scroll-page-up
 
