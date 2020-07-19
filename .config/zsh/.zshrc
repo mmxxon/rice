@@ -7,6 +7,7 @@ fi
 
 # Enable colors and change prompt:
 setopt autocd		# Automatically cd into typed directory.
+setopt noclobber
 
 # History in cache directory:
 HISTSIZE=10000
@@ -77,6 +78,8 @@ bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
 bindkey '^[[P' delete-char
 
 bindkey '^R' history-incremental-search-backward
+
+bindkey '^T' history-incremental-search-forward
 
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line

@@ -300,9 +300,9 @@
 def_key "V"
   reverse_selection
 
-#def_key "V"
-#  remove_selection
-#
+def_key "ctrl-v"
+  remove_selection
+
 #def_key "B"
 #  select_album
 #

@@ -14,3 +14,7 @@ cfk	${XDG_CONFIG_HOME:-$HOME/.config}/sxhkd/sxhkdrc
 cfi	${XDG_CONFIG_HOME:-$HOME/.config}/i3/config
 cfb	${XDG_CONFIG_HOME:-$HOME/.config}/i3blocks/config
 cff	${XDG_CONFIG_HOME:-$HOME/.config}/fontconfig/fonts.conf
+cfvb ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/bindings.vim
+cfvg ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/general.vim
+cfvp ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugins.vim
+cfvi ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/init.vim
