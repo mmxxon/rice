@@ -1,68 +1,37 @@
-command=~/.local/bin/statusbar/$BLOCK_NAME
-align=center
-color=#666666
-separator_block_width=15
+#!/bin/sh
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+command=~/.local/bin/blocks/wrap $BLOCK_NAME
+separator=false
+separator_block_width=0
 markup=pango
 
+[title]
+signal=1
+interval=once
+
 [record]
-command=cat /tmp/recordingicon
 interval=once
-signal=9
+signal=2
 
-[music]
-label=🎼
+[mus]
+signal=3
 interval=once
-signal=11
-color=#EAEAEA
 
-#[iplocate]
-#interval=30
-
-[pacpackages]
-interval=60
-signal=8
-
-[torrent]
-interval=20
-signal=7
-color=#1793D1
-
-[weather]
-interval=18000
-signal=5
-color=#b58900
-
-[mailbox]
-interval=180
-signal=12
-color=#1793D1
-
-#[memory]
-#interval=30
-
-#[cpu]
-#interval=15
-
-[volume]
-interval=once
-signal=10
-color=#6c71c4
-
-[disk]
-interval=60
-command=disk
-color=#859900
-
-[battery]
-command=battery BAT0
-interval=5
-color=#7F00FF
-
-[clock]
-label=📅
+[time]
 interval=1
-color=#50C878
-
-[internet]
-interval=10
-color=#d33682

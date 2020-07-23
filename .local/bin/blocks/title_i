@@ -1,0 +1,13 @@
+#!/bin/bash
+idle() {
+	title=$(xtitle)
+
+	while :; do
+		title2=$(xtitle)
+		[[ ! "${title}" = "${title2}" ]] && break
+	done
+}
+
+while :; do
+	$(idle) && pkill -SIGRTMIN+1 i3blocks
+done
