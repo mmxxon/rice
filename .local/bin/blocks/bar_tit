@@ -9,5 +9,5 @@ idle() {
 }
 
 while :; do
-	$(idle) && pkill -SIGRTMIN+1 i3blocks
+	$(idle) && pkill -SIGRTMIN+1 ${STATUSBAR:-i3blocks}
 done
