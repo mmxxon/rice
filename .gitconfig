@@ -3,7 +3,6 @@
     email = xondev@vivaldi.net
     name = Maksym Movchan
     username = xon
-    signingkey = xondev@vivaldi.net
 [credential]
     helper = libsecret
 [core]
