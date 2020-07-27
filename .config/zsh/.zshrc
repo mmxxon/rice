@@ -2,15 +2,13 @@
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 precmd () { print -Pn "\e]2;%~\a" }
+setopt autocd		# Automatically cd into typed directory.
+set -o noclobber
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
-
 # Enable colors and change prompt:
-setopt autocd		# Automatically cd into typed directory.
-setopt noclobber
 
 # History in cache directory:
 HISTSIZE=10000

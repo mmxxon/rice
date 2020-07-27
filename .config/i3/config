@@ -42,7 +42,7 @@ for_window [title="Default - Wine desktop"] floating enable
 
 bar {
 		# font pango:Source Sans Pro-10 10
-    font pango:Source Code Pro 10
+    font pango:Source Code Pro 9
     status_command i3blocks
     colors {
 				background					#222222

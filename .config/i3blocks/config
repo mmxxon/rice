@@ -16,16 +16,16 @@
 # signal
 # urgent
 
-command=~/.local/bin/blocks/wrap $BLOCK_NAME
+command=~/.config/i3blocks/blocks/wrap $BLOCK_NAME
 separator=false
 separator_block_width=0
 markup=pango
 
-[title]
+[tit]
 signal=1
 interval=once
 
-[record]
+[rec]
 interval=once
 signal=2
 
@@ -33,5 +33,13 @@ signal=2
 signal=3
 interval=once
 
-[time]
+[wea]
+interval=180
+signal=4
+
+[xkb]
+interval=1
+signal=5
+
+[tim]
 interval=1
