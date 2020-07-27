@@ -9,5 +9,5 @@ main() {
 		ru) value=🇷🇺 ;;
 	esac
 	local text="<span color='$GRA' bgcolor='$BLA'> $value </span>"
-	echo -e "${before}${text}${after}"
+	[ ! "$value" = "" ] && echo -e "${before}${text}${after}"
 }

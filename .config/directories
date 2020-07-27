@@ -3,7 +3,7 @@ cac ${XDG_CACHE_HOME:-$HOME/.cache}
 cf  ${XDG_CONFIG_HOME:-$HOME/.config}
 D   ${XDG_DOWNLOAD_DIR:-$HOME/dloads}
 d   ${XDG_DOCUMENTS_DIR:-$HOME/docs}
-h   ${XDG_CONFIG_HOME:-$HOME}
+h   $HOME
 m   ${XDG_MUSIC_DIR:-$HOME/music}
 pp  ${XDG_PICTURES_DIR:-$HOME/pics}
 vv  ${XDG_VIDEOS_DIR:-$HOME/vids}

@@ -2,4 +2,5 @@
 
 while :; do
 	xkb-switch -w &> /dev/null && pkill -SIGRTMIN+5 ${STATUSBAR:-i3blocks}
+	sleep .1
 done
