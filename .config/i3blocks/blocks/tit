@@ -1,0 +1,15 @@
+#!/bin/bash
+
+main() {
+	$(pidof -x bar_tit &>/dev/null) || $(bar_tit &>/dev/null &)
+
+	local value="$(xtitle -t 40)"
+	case $BLOCK_BUTTON in
+		1) setsid -f $(xtitle) | setsid -f $(xclip -selection clipboard); setsid -f notify-send "Yanked to clipboard" ;;
+	esac
+
+	local before="<span color='${BLA}' bgcolor='${BLA}'></span>"
+	local text="<span color='${GRA}' bgcolor='${BLA}'> ${value} </span>"
+
+	[ ! "${value}" == "" ] && echo -e "${text}${after}"
+}

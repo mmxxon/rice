@@ -1,0 +1,9 @@
+#!/bin/bash
+
+main() {
+	value=$([ -f /tmp/recordingicon ] && cat /tmp/recordingicon || echo "")
+	local before="<span color='${GRA}' bgcolor='${BLA}'>${LU}</span>"
+	local text="<span color='${GRA}' bgcolor='${BLA}'>${value}</span>"
+
+	[ "${value}" == "" ] || echo -e "${before}${text}"
+}

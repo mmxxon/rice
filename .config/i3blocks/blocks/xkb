@@ -1,0 +1,13 @@
+#!/bin/sh
+
+main() {
+	local value="$(xkblayout-state print "%s")"
+	$(pidof -x bar_xkb &>/dev/null) || $(bar_xkb &>/dev/null &)
+	case $value in
+		us) value=🇺🇸 ;;
+		ua) value=🇺🇦 ;;
+		ru) value=🇷🇺 ;;
+	esac
+	local text="<span color='$GRA' bgcolor='$BLA'> $value </span>"
+	echo -e "${before}${text}${after}"
+}
