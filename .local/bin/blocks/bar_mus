@@ -2,5 +2,4 @@
 
 while :; do
 	mpc idle &>/dev/null && pkill -SIGRTMIN+3 ${STATUSBAR:-i3blocks}
-	sleep 1
 done

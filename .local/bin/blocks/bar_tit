@@ -11,5 +11,4 @@ idle() {
 
 while :; do
 	$(idle) && pkill -SIGRTMIN+1 ${STATUSBAR:-i3blocks}
-	sleep .3
 done

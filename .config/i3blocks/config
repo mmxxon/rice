@@ -22,16 +22,16 @@ separator_block_width=0
 markup=pango
 
 [tit]
-signal=1
 interval=once
+signal=1
 
 [rec]
 interval=once
 signal=2
 
 [mus]
-signal=3
 interval=once
+signal=3
 
 [wea]
 interval=180
