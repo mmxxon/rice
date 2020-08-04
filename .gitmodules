@@ -1,3 +1,0 @@
-[submodule "/home/xon/.config/nvim"]
-	path = /home/xon/.config/nvim
-	url = https://github.com/xon-dev/nvim-cfg
