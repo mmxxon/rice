@@ -4,22 +4,23 @@ readonly DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 readonly DEV=$1
 
 # Colors
-readonly WHI='#fdf6e3'
-readonly GRA='#aaaaaa'
-readonly BLA='#222222'
-readonly RED='#e5786d'
-readonly YEL='#ffe161'
-readonly GRE='#cae682'
-readonly BLU='#5283d7'
-readonly MAG='#b698d9'
-readonly CYA='#a8c6f2'
-readonly TEA='#18A7B5'
+readonly whi='#fdf6e3'
+readonly gra='#aaaaaa'
+readonly bla='#222222'
+readonly red='#e5786d'
+readonly yel='#ffe161'
+readonly gre='#cae682'
+readonly blu='#5283d7'
+readonly mag='#b698d9'
+readonly cya='#a8c6f2'
+readonly tea='#18A7B5'
 
 # Shapes
-readonly LF=''
-readonly RF=''
-readonly LU=''
-readonly RU=''
+# U+E0B0 - U+E0C8
+readonly lf=''
+readonly rf=''
+readonly lu=''
+readonly ru=''
 
 FG=$GRA
 BG=$BLA

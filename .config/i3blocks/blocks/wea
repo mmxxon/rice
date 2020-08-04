@@ -2,7 +2,7 @@
 
 link="${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport"
 
-upd() { curl -sf "wttr.in/$LOCATION" > "$link" || exit 1 ; }
+upd() { curl -sf "wttr.in/$LOCATION" > "$link"; }
 
 show() { sed "16q;d" "$link" |
 	grep -wo "[0-9]*%" | sort -rn | sed "s/^//g;1q" | tr -d '\n'
@@ -11,17 +11,16 @@ sed "13q;d" "$link" | grep -o "m\\([-+]\\)*[0-9]\\+" |
 	awk '{print " " $1 "°","" $2 "°"}' ;}
 
 main () {
-
 	upd
 	local value=$(show)
-	local before="<span color='${YEL}' bgcolor='${BLA}'></span>"
-	local after="<span color='${BLA}' bgcolor='${YEL}'></span>"
-	local text
-	[ ! "${value}" == "" ] && text="<span color='${BLA}' bgcolor='${YEL}'> ${value} </span>" || text="<span color='${GRA}' bgcolor='${YEL}'> [no updates] </span>"
-	echo -e "${before}${text}${after}"
+	local before="<span color='$yel' bgcolor='$bla'></span>"
+	local after="<span color='$bla' bgcolor='$yel'>$lf</span>"
+	[ ! "$value" == "" ] && local text="<span color='$bla' bgcolor='$yel'> $value </span>" || local text="<span color='$red' bgcolor='$yel'> [no connection] </span>"
+	echo -e "$before$text$after"
 
 	case $BLOCK_BUTTON in
 		1) setsid -f "$TERMINAL" -e less -Srf "$link" ;;
-		3) upd && pkill -SIGRTMIN+4 ;;
+		3) upd && pkill -SIGRTMIN+4 i3blocks ;;
 	esac
+
 }

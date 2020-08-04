@@ -8,15 +8,17 @@ main() {
 
 	local value=$(filter)
 	# local prefix="<span font='FontAwesome'>\uf017</span> "
-	local before="<span color='${BLU}' bgcolor='${BLA}'></span>"
-	local after="<span color='${BLA}' bgcolor='${BLU}'></span>"
-	local text="<span color='${BLA}' bgcolor='${BLU}'> ${value} </span>"
-	[ ! "${value}" == "" ] && echo -e "${before}${text}${after}"
+	local before="<span color='$blu' bgcolor='$bla'>$lf</span>"
+	local after="<span color='$bla' bgcolor='$blu'></span>"
+	local text="<span color='$bla' bgcolor='$blu'> $value </span>"
+	[ ! "$value" == "" ] && echo -e "$before$text$after"
 
 	case $BLOCK_BUTTON in
 		1) mpc toggle ;;
 		3) setsid -f "$TERMINAL" -e ncmpcpp ;;
 		4) mpc next	;;
 		5) mpc prev	;;
+		6) mpc seek +5 ;;
+		7) mpc seek -5 ;;
 	esac
 }

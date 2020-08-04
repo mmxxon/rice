@@ -8,6 +8,6 @@ main() {
 		ua) value=🇺🇦 ;;
 		ru) value=🇷🇺 ;;
 	esac
-	local text="<span color='$GRA' bgcolor='$BLA'> $value </span>"
-	[ ! "$value" = "" ] && echo -e "${before}${text}${after}"
+	local text="<span color='$gra' bgcolor='$bla'> $value </span>"
+	[ ! "$value" = "" ] && echo -e "$before$text$after"
 }
