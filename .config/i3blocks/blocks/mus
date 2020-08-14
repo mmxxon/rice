@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # filter() { mpc | sed -E "s/^volume: n\\/a.*//;" | sed -E "s/\\&/&amp;/g;s/\[paused\].*/ /g;s/\[playing\].*/ /g;s/^volume:[0-9]+%\s+//;s/repeat: on\s+/ /;s/repeat: off\s+//;s/random: on\s+/ /;s/random: off\s+//;s/single: on\s+/ /;s/single: off\s+//;s/consume: on\s+/ /;s/consume: off//;" | paste -sd '';}
-filter() { mpc | sed -E "s/^volume: n\\/a.*//;" | sed -E "s/\\&/&amp;/g;s/\[paused\].*/ /g;s/\[playing\].*/ /g;s/^volume:[0-9].*//;" | paste -sd '';}
+filter() { mpc | sed -e 's/\[paused\].*/ /g;s/\[playing\].*/ /g;s/volume:[0-9]\{1,3\}%.*//g' | paste -sd '';}
 
 main() {
 	$(pidof -x bar_mus &>/dev/null) || $(bar_mus &>/dev/null &)
@@ -9,7 +9,7 @@ main() {
 	local value=$(filter)
 	# local prefix="<span font='FontAwesome'>\uf017</span> "
 	local before="<span color='$blu' bgcolor='$bla'>$lf</span>"
-	local after="<span color='$bla' bgcolor='$blu'></span>"
+	local after="<span color='$bla' bgcolor='$blu'>$lf</span>"
 	local text="<span color='$bla' bgcolor='$blu'> $value </span>"
 	[ ! "$value" == "" ] && echo -e "$before$text$after"
 
@@ -18,7 +18,7 @@ main() {
 		3) setsid -f "$TERMINAL" -e ncmpcpp ;;
 		4) mpc next	;;
 		5) mpc prev	;;
-		6) mpc seek +5 ;;
-		7) mpc seek -5 ;;
+		6) mpc seek +20 ;;
+		7) mpc seek -20 ;;
 	esac
 }

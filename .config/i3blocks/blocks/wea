@@ -12,15 +12,21 @@ sed "13q;d" "$link" | grep -o "m\\([-+]\\)*[0-9]\\+" |
 
 main () {
 	upd
-	local value=$(show)
+	local value
+	if [ ! $(ping -q -w 1 -c 1 `ip r | grep default | cut -d ' ' -f 3`) ]; then
+		value="[no connection]"
+	elif [ $(curl wttr.in --silent | wc -l) -lt 3 ]; then
+		value="[site down]"
+	else 
+		value="$(show)"
+	fi
 	local before="<span color='$yel' bgcolor='$bla'></span>"
-	local after="<span color='$bla' bgcolor='$yel'>$lf</span>"
-	[ ! "$value" == "" ] && local text="<span color='$bla' bgcolor='$yel'> $value </span>" || local text="<span color='$red' bgcolor='$yel'> [no connection] </span>"
+	local after="<span color='$bla' bgcolor='$yel'></span>"
+	local text="<span color='$bla' bgcolor='$yel'>$value </span>"
 	echo -e "$before$text$after"
 
 	case $BLOCK_BUTTON in
 		1) setsid -f "$TERMINAL" -e less -Srf "$link" ;;
 		3) upd && pkill -SIGRTMIN+4 i3blocks ;;
 	esac
-
 }

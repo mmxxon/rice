@@ -17,10 +17,55 @@ readonly tea='#18A7B5'
 
 # Shapes
 # U+E0B0 - U+E0C8
-readonly lf=''
-readonly rf=''
-readonly lu=''
-readonly ru=''
+
+# Arrow {{{
+readonly rfa=''
+readonly rua=''
+readonly lfa=''
+readonly lua=''
+# }}}
+
+# Rounded {{{
+readonly rfr=''
+readonly rur=''
+readonly lfr=''
+readonly lur=''
+# }}}
+
+# Slab {{{
+readonly rfs=''
+readonly rus=''
+readonly lfs=''
+readonly lus=''
+# }}}
+
+# Slab flipped {{{
+readonly rfsf=''
+readonly rusf=''
+readonly lfsf=''
+readonly lusf=''
+# }}}
+
+# Fire {{{
+readonly rff=''
+readonly ruf=''
+readonly lff=''
+readonly luf=''
+# }}}
+
+# Dots {{{
+readonly rfd=''
+readonly rud=''
+readonly lfd=''
+readonly lud=''
+# }}}
+
+# Global {{{
+readonly rf=$rfs
+readonly ru=$rus
+readonly lf=$lfs
+readonly lu=$lus
+# }}}
 
 FG=$GRA
 BG=$BLA
@@ -40,3 +85,5 @@ else
 
     echo -e "$(main)"
 fi
+
+# vim: set foldmethod=marker ts=2 sw=2 tw=80 noet :
