@@ -300,3 +300,4 @@ bindsym XF86WLAN											exec $netrefresh
 ##bindsym XF86Save		exec
 ##bindsym XF86Battery		exec
 ##bindsym XF86Bluetooth		exec
+exec --no-startup-id picom

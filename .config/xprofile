@@ -20,4 +20,3 @@ unclutter &		# Remove mouse when idle
 xinput set-prop SynPS/2\ Synaptics\ TouchPad libinput\ Tapping\ Enabled 1 &
 xinput set-prop SynPS/2\ Synaptics\ TouchPad libinput\ Natural\ Scrolling\ Enabled 1 &
 setbg &			# set the background with the `setbg` script
-picom &
