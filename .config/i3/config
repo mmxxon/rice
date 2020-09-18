@@ -1,10 +1,10 @@
 #!/bin/bash
 
+set $mod Mod4
+
 set $inner_gaps 10
 set $outer_gaps 0
 set $term --no-startup-id $TERMINAL
-set $mod Mod4
-set $stoprec --no-startup-id dmenurecord kill
 set $shutdown sudo -A shutdown -h now
 set $reboot sudo -A reboot
 set $netrefresh --no-startup-id sudo -A systemctl restart NetworkManager
@@ -138,7 +138,7 @@ bindsym $mod+bracketleft	exec --no-startup-id mpc seek -10
 bindsym $mod+bracketright		exec --no-startup-id mpc seek +10
 bindsym Print			exec --no-startup-id maim ~/pics/pic-full-"$(date '+%y%m%d-%H%M-%S').png"
 bindsym $mod+Print		exec --no-startup-id dmenurecord
-bindsym $mod+Delete		exec $stoprec
+bindsym $mod+Delete		exec --no-startup-id dmenurecord kill
 
 # ---- Shift ----
 bindsym $mod+Shift+Return	exec --no-startup-id samedir
@@ -248,8 +248,8 @@ bindsym XF86WebCam										exec --no-startup-id camtoggle
 bindsym XF86Mail											exec $term -e neomutt
 bindsym XF86Messenger									exec $term -e weechat
 bindsym XF86Search										exec $BROWSER https://duckduckgo.com
-bindsym XF86MonBrightnessDown					exec --no-startup-id xbacklight -dec 15
-bindsym XF86MonBrightnessUp						exec --no-startup-id xbacklight -inc 15
+bindsym XF86MonBrightnessDown					exec --no-startup-id brightnessctl set 15%-
+bindsym XF86MonBrightnessUp						exec --no-startup-id brightnessctl set 15%+
 bindsym XF86AudioMedia								exec --no-startup-id $term -e ncmpcpp
 bindsym XF86Display										exec --no-startup-id displayselect
 bindsym XF86Documents									exec $term -e lf ~/docs
