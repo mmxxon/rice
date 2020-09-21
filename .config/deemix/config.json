@@ -72,6 +72,8 @@
     "saveID3v1": true,
     "multiArtistSeparator": "default",
     "singleAlbumArtist": false,
-    "syncedLyrics": false
-  }
+    "syncedLyrics": false,
+    "coverDescriptionUTF8": false
+  },
+  "tagsLanguage": ""
 }

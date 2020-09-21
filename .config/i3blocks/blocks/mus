@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #filter() { mpc | sed -E "s/^volume: \?n\\/a.*//;" | sed -e "s/\\&/&amp;/g;s/\[paused\].*/ /g;s/\[playing\].*/ /g;s/^volume:[0-9]+%\s+//;s/repeat: on\s+/ /;s/repeat: off\s+//;s/random: on\s+/ /;s/random: off\s+//;s/single: on\s+/ /;s/single: off\s+//;s/consume: on\s+/ /;s/consume: off//;" | paste -sd '';}
-filter() { mpc | sed -e 's/volume: n\/a.*//g' | sed -e 's/\[paused\].*/ /g;s/\[playing\].*/ /g;s/volume:[ 0-9]\+%.*//g' | paste -sd '';}
+filter() { mpc | sed -e 's/volume: n\/a.*//g' | sed -e 's/\&/&amp;/g;s/\[paused\].*/ /g;s/\[playing\].*/ /g;s/volume:[ 0-9]\+%.*//g' | paste -sd '';}
 
 main() {
 	$(pidof -x bar_mus &>/dev/null) || $(bar_mus &>/dev/null &)
