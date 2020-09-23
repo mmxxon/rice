@@ -41,5 +41,8 @@ signal=4
 interval=1
 signal=5
 
+[bat]
+interval=1
+
 [tim]
 interval=1
