@@ -1,9 +1,9 @@
 # ---- Global ----
 [user]
-		email = 58429288+xon-personal@users.noreply.github.com
+		email = xon.dev@protonmail.com
     name = Maksym Movchan
     username = xon
-    signingkey = xondev@vivaldi.net
+    signingkey = xon.dev@protonmail.com
 [credential]
     helper = libsecret
 [core]

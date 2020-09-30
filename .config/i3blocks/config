@@ -37,12 +37,12 @@ signal=3
 interval=180
 signal=4
 
+[tim]
+interval=1
+
 [xkb]
 interval=1
 signal=5
 
 [bat]
-interval=1
-
-[tim]
 interval=1
