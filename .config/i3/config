@@ -231,10 +231,10 @@ bindsym XF86Explorer									exec $term -e lf
 bindsym XF86WWW												exec --no-startup-id $BROWSER
 bindsym XF86ScreenSaver								exec exec --no-startup-id lockscreen
 bindsym XF86MyComputer								exec $term -e lf
-bindsym XF86AudioNext									exec --no-startup-id mpc next
-bindsym XF86AudioPlay									exec --no-startup-id mpc toggle
-bindsym XF86AudioPrev									exec --no-startup-id mpc prev
-bindsym XF86Eject											exec --no-startup-id mpc stop
+bindsym XF86AudioNext									exec --no-startup-id playerctl next
+bindsym XF86AudioPlay									exec --no-startup-id playerctl play-pause
+bindsym XF86AudioPrev									exec --no-startup-id playerctl previous
+bindsym XF86Eject											exec --no-startup-id playerctl stop
 bindsym XF86AudioRewind								exec --no-startup-id mpc seek -10
 bindsym XF86AudioForward							exec --no-startup-id mpc seek +10
 bindsym XF86HomePage									exec $BROWSER https://github.com/xon-dev/
