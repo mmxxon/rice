@@ -6,7 +6,7 @@ filter() { mpc | sed -e 's/volume: n\/a.*//g' | sed -e 's/\&/&amp;/g;s/\[paused\
 main() {
 	$(pidof -x bar_mus &>/dev/null) || $(bar_mus &>/dev/null &)
 
-	local value=$(filter)
+	local value=$(playerctl metadata --format "{{ artist }} - {{ title }}")
 	# local prefix="<span font='FontAwesome'>\uf017</span> "
 	local before="<span color='$blu' bgcolor='$bla'>$lf</span>"
 	local after="<span color='$bla' bgcolor='$blu'>$lf</span>"
@@ -14,11 +14,10 @@ main() {
 	[ ! "$value" == "" ] && echo -e "$before$text$after"
 
 	case $BLOCK_BUTTON in
-		1) mpc toggle ;;
-		3) setsid -f "$TERMINAL" -e ncmpcpp ;;
-		4) mpc next	;;
-		5) mpc prev	;;
-		6) mpc seek +20 ;;
-		7) mpc seek -20 ;;
+		1) playerctl play-pause ;;
+		4) playerctl previous	;;
+		5) playerctl next	;;
+		6) playerctl position 20+ ;;
+		7) playerctl position 20- ;;
 	esac
 }

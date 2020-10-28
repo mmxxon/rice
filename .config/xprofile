@@ -8,7 +8,7 @@
 dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
 
 unicode_start &
-mpd &			# music player daemon-you might prefer it as a service though
+# mpd &			# music player daemon-you might prefer it as a service though
 remaps &		# run the remaps script, switching caps/esc and more; check it for more info
 calcurse --daemon &
 # hsetroot -solid "#010F0F" &
@@ -20,3 +20,4 @@ unclutter &		# Remove mouse when idle
 xinput set-prop "ELAN0515:01 04F3:3142 Touchpad" libinput\ Tapping\ Enabled 1 &
 xinput set-prop "ELAN0515:01 04F3:3142 Touchpad" libinput\ Natural\ Scrolling\ Enabled 1 &
 setbg &			# set the background with the `setbg` script
+mpDris2 &

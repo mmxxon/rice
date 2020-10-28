@@ -1,5 +1,14 @@
 #!/bin/bash
+idle() {
+	playing="$(playerctl metadata --format '{{ artist }} - {{ title }}')"
+
+	while :; do
+		playing2="$(playerctl metadata --format '{{ artist }} - {{ title }}')"
+		[[ ! "${playing}" = "${playing2}" ]] && break
+		sleep .3
+	done
+}
 
 while :; do
-	mpc idle &>/dev/null && pkill -SIGRTMIN+3 ${STATUSBAR:-i3blocks}
+	$(idle) && pkill -SIGRTMIN+3 ${STATUSBAR:-i3blocks}
 done

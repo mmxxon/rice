@@ -1,1 +1,1 @@
-/home/xon/.config/nvim
+.config/nvim/
