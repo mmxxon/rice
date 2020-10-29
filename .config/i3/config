@@ -128,8 +128,6 @@ bindsym $mod+F11	exec --no-startup-id ducksearch
 bindsym $mod+F12	exec $term -e nmtui
 bindsym $mod+Up			focus up
 bindsym $mod+Down		focus down
-bindsym $mod+Left		focus left
-bindsym $mod+Right		focus right
 bindsym $mod+plus		exec --no-startup-id pulsemixer --change-volume +5
 bindsym $mod+minus		exec --no-startup-id pulsemixer --change-volume -5
 bindsym $mod+less		exec --no-startup-id playerctl previous
@@ -254,6 +252,8 @@ bindsym XF86AudioMedia								exec --no-startup-id $term -e ncmpcpp
 bindsym XF86Display										exec --no-startup-id displayselect
 bindsym XF86Documents									exec $term -e lf ~/docs
 bindsym XF86WLAN											exec $netrefresh
+bindsym $mod+Left											exec --no-startup-id playerctl position 10-
+bindsym $mod+Right										exec --no-startup-id playerctl position 10+
 
 # ---- Unused ----
 ##bindsym XF86Copy		exec
