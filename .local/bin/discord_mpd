@@ -1,0 +1,3 @@
+#!/bin/zsh
+discord &
+mpd_discord_richpresence &
