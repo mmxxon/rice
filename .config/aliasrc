@@ -11,7 +11,8 @@ alias \
 	mkd="mkdir -pv" \
 	yt="youtube-dl --add-metadata -i" \
 	yta="yt -x -f bestaudio/best" \
-	ffmpeg="ffmpeg -hide_banner"
+	ffmpeg="ffmpeg -hide_banner" \
+	spotify="[ -f /usr/local/lib/spotify-adblock.so ] && env LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify %U || echo 'Not found library'"
 
 # Colorize commands when possible.
 alias \
