@@ -7,6 +7,7 @@
 
 # Adds `~/.local/bin` to $PATH
 export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':')"
+export PATH="$PATH:$HOME/.local/share/cargo/bin"
 
 # Default programs:
 export GPG_TTY="$(tty)"

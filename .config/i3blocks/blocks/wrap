@@ -70,20 +70,20 @@ readonly lu=$lus
 FG=$GRA
 BG=$BLA
 
-if [ "$#" -ne 1 ]
-then
-    notify-send "usage: ${0} <dev>"
-    exit 1
-fi
+# if [ "$#" -ne 1 ]
+# then
+#     notify-send "usage: ${0} <dev>"
+#     exit 1
+# fi
+# 
+# if [ ! -e $DIR/$DEV ]
+# then
+#     notify-send "block '$DEV' not found"
+#     exit 1
+# else
+. $DIR/$DEV
 
-if [ ! -e $DIR/$DEV ]
-then
-    notify-send "block '$DEV' not found"
-    exit 1
-else
-    . $DIR/$DEV
-
-    echo -e "$(main)"
-fi
+echo -e "$(main)"
+# fi
 
 # vim: set foldmethod=marker ts=2 sw=2 tw=80 noet :

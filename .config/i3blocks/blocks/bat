@@ -1,19 +1,18 @@
 #!/bin/bash
 
 main(){
+	link="${XDG_DATA_HOME:-$HOME/.local/share}/tmp/beep"
 	for bat in /sys/class/power_supply/BAT?
 	do
 		cap=$(cat "$bat"/capacity 2>/dev/null) || break
 		stat=$(sed "s/[Dd]ischarging//;s/[Nn]ot charging//;s/[Cc]harging//;s/[Uu]nknown//;s/[Ff]ull//" "$bat"/status)
 
-		# If it is discharging and 25% or less, we will add a  as a warning.
-		[ "$cap" -le 25 ] && [ "$stat" = "" ] && warn=""
+		[ "$cap" -le 25 ] && [ "$stat" = "" ] && local warn=" " && [ "$(cat $link)" = "0" ] && echo 1 > $link && $(mpv "/home/xon/music/sounds/1.mp3" &> /dev/null &)
+		[ ! "$stat" = "" ] && [ ! "$(cat $link)" = "0" ] && echo 0 > $link
 
-		local value="$stat$warn $cap"
+		local value="$stat $cap$warn"
 		local before="<span color='$gra' bgcolor='$bla'>$lua</span>"
 		local text="<span color='$gra' bgcolor='$bla'> $value </span>"
 		[ ! "$value" == "" ] && echo -e " $before$text"
-
-		unset warn
 	done | sed 's/ *$//'
 }

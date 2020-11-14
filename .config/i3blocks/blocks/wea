@@ -1,6 +1,6 @@
 #!/bin/sh
 
-link="${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport"
+link="${XDG_DATA_HOME:-$HOME/.local/share}/tmp/wea"
 
 upd() { curl -sf "wttr.in/$LOCATION" > "$link"; }
 
