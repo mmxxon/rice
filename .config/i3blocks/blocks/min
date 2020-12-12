@@ -1,0 +1,15 @@
+#!/bin/bash
+
+main() {
+  local value ip='34.107.17.22'
+	if [ ! "$(ping -q -w 1 -c 1 $ip)" ]; then
+		value="[no connection]"
+  else
+    value="$(mcrcon  -H $ip -p XonG0d list \
+      | sed -e 's/There are /[/;s/ of a max of /\//;s/ players online:.*/] players/;')"
+  fi
+  local before="<span color='$mag' bgcolor='$bla'>$lf</span>"
+  local after="<span color='$bla' bgcolor='$mag'>$lf</span>"
+  local text="<span color='$bla' bgcolor='$mag'> $value </span>"
+	[ ! "$value" == "" ] && echo -e "$before$text$after"
+}

@@ -17,7 +17,7 @@ main () {
 		value="[no connection]"
 	elif [ "$(curl wttr.in --silent | wc -l)" -lt 3 ]; then
 		value="[site down]"
-	else 
+	else
 		value="$(show)"
 	fi
 	local before="<span color='$yel' bgcolor='$bla'></span>"

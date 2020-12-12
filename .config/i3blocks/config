@@ -33,6 +33,9 @@ signal=2
 interval=once
 signal=3
 
+[min]
+interval=3
+
 [wea]
 interval=180
 signal=4

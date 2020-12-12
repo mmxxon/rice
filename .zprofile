@@ -1,10 +1,5 @@
 #!/bin/zsh
 
-# zsh profile file. Runs on login. Environmental variables are set here.
-
-# If you don't plan on reverting to bash, you can remove the link in ~/.profile
-# to clean up.
-
 # Adds `~/.local/bin` to $PATH
 export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':')"
 export PATH="$PATH:$HOME/.local/share/cargo/bin"
@@ -13,10 +8,9 @@ export PATH="$PATH:$HOME/.local/share/cargo/bin"
 export GPG_TTY="$(tty)"
 export EDITOR="nvim"
 export TERMINAL="st"
-export BROWSER="firefox"
+export BROWSER="waterfox-current"
 export READER="zathura"
 
-# ~/ Clean-up:
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
@@ -38,6 +32,7 @@ export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 export ANSIBLE_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/ansible/ansible.cfg"
 export UNISON="${XDG_DATA_HOME:-$HOME/.local/share}/unison"
 export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
+export SYSTEMD_EDITOR="nvim"
 
 # Other program settings:
 export DICS="/usr/share/stardict/dic/"

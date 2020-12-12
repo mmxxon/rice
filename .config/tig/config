@@ -19,11 +19,12 @@ bind generic    gs   view-grep
 bind generic    gg   move-first-line
 bind generic    G    move-last-line
 bind main       G    move-last-line # overwrite the default
+bind main       T    >git tag -s "%(prompt Tag: )" -m "%(prompt Message: )" %(commit)
 bind generic    p    none # disable single p for pager(default)
 bind generic    pl   !git pull -S
 bind generic    pl   !git pull %(remote) -S
-bind generic    pu   >git push
-bind generic    pU   >git push -u %(remote) %(repo:head)
+bind generic    pu   !git push
+bind generic    pU   !git push -u %(remote) %(repo:head)
 bind generic    <Ctrl-f>   scroll-page-down
 bind generic    <Ctrl-b>   scroll-page-up
 
