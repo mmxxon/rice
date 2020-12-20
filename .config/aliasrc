@@ -37,3 +37,7 @@ alias \
 alias \
 	weath="curl -sf 'wttr.in/$LOCATION' >! '${XDG_DATA_HOME:-$HOME/.local/share}/tmp/wea' && less -S '${XDG_DATA_HOME:-$HOME/.local/share}/tmp/wea'" \
 	tmux="tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf" \
+
+if command -v python &> /dev/null; then
+  alias py="python"
+fi
