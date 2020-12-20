@@ -6,7 +6,7 @@ filter() { mpc | sed -e 's/volume: n\/a.*//g' | sed -e 's/\&/&amp;/g;s/\[paused\
 main() {
 	$(pidof -x bar_mus &>/dev/null) || $(bar_mus &>/dev/null &)
 
-	local value=$(playerctl metadata --format "{{ artist }} - {{ title }}")
+	local value=$(playerctl metadata --format "{{ artist }} - {{ title }}" | sed -e 's/\&/&amp;/g')
 	# local prefix="<span font='FontAwesome'>\uf017</span> "
 	local before="<span color='$blu' bgcolor='$bla'>$lf</span>"
 	local after="<span color='$bla' bgcolor='$blu'>$lf</span>"
