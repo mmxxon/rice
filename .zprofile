@@ -1,9 +1,5 @@
 #!/bin/zsh
 
-# Adds `~/.local/bin` to $PATH
-export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':')"
-export PATH="$PATH:$HOME/.local/share/cargo/bin"
-
 # Default programs:
 export GPG_TTY="$(tty)"
 export EDITOR="nvim"
@@ -33,6 +29,11 @@ export ANSIBLE_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/ansible/ansible.cfg"
 export UNISON="${XDG_DATA_HOME:-$HOME/.local/share}/unison"
 export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
 export SYSTEMD_EDITOR="nvim"
+export PYENV_ROOT="$HOME/.pyenv"
+
+export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':')"
+export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="$PATH:$HOME/.local/share/cargo/bin"
 
 # Other program settings:
 export DICS="/usr/share/stardict/dic/"
@@ -125,10 +126,4 @@ ex=🎯:\
 *.java=♨:\
 "
 
-[ ! -f ${XDG_CONFIG_HOME:-$HOME/.config}/shortcutrc ] && shortcuts >/dev/null 2>&1 &
-
-# Start graphical server on tty1 if not already running.
 [ "$(tty)" = "/dev/tty1" ] && ! pidof Xorg >/dev/null 2>&1  && exec startx
-
-# Switch escape and caps if tty and no passwd required:
-# sudo -n loadkeys ${XDG_DATA_HOME:-$HOME/.local/share}/larbs/ttymaps.kmap 2>/dev/null
