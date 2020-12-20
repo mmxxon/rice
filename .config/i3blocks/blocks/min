@@ -5,7 +5,7 @@ main() {
 	if [ ! "$(ping -q -w 1 -c 1 $ip)" ]; then
 		value="[no connection]"
   else
-    value="$(mcrcon  -H $ip -p XonG0d list \
+    value="$(mcrcon  -H $ip -p `cat $HOME/.config/i3blocks/min_pass` list \
       | sed -e 's/There are /[/;s/ of a max of /\//;s/ players online:.*/] players/;')"
   fi
   local before="<span color='$mag' bgcolor='$bla'>$lf</span>"
