@@ -1,6 +1,6 @@
 # ---- Global ----
 [user]
-		email = xon.dev@protonmail.com
+    email = xon.dev@protonmail.com
     name = Maksym Movchan
     username = xon
     signingkey = xon.dev@protonmail.com
@@ -9,6 +9,8 @@
 [core]
     editor = nvim
     excludesfile = ~/.gitignore
+[init]
+	defaultBranch = master
 
 
 # ---- Colors ----

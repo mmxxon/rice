@@ -73,7 +73,8 @@
     "multiArtistSeparator": "default",
     "singleAlbumArtist": false,
     "syncedLyrics": false,
-    "coverDescriptionUTF8": false
+    "coverDescriptionUTF8": false,
+    "source": false
   },
   "tagsLanguage": ""
 }

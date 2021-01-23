@@ -1,0 +1,2 @@
+#!/bin/zsh
+gcloud compute ssh minecraft --project "main-kraft"

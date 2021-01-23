@@ -19,6 +19,17 @@ set $ws8 "8: Games"
 set $ws9 "9: Music"
 set $ws10 "10: Waiting"
 
+workspace "1"           output eDP
+workspace "2"           output eDP
+workspace "3"           output eDP
+workspace "4"           output eDP
+workspace "5"           output eDP
+workspace "6"           output eDP
+workspace "7"           output eDP
+workspace "8: Games"    output HDMI-A-0
+workspace "9: Music"    output HDMI-A-0
+workspace "10: Waiting" output HDMI-A-0
+
 set $inner_gaps 10
 set $outer_gaps 0
 gaps inner $inner_gaps
@@ -35,7 +46,7 @@ for_window [instance="dropdown_*"] move position center
 for_window [class="Pinentry"] sticky enable
 for_window [class="sent"] border pixel 0px
 for_window [class="Spotify"] move workspace $ws9
-for_window [class="Minecraft*"] border pixel 2
+for_window [class="libreoffice"] move workspace $ws4
 for_window [window_role="GtkFileChooserDialog"] resize set 800 600
 for_window [window_role="GtkFileChooserDialog"] move position center
 for_window [title="Default - Wine desktop"] floating enable
@@ -116,7 +127,7 @@ bindsym $mod+7		workspace $ws7
 bindsym $mod+8		workspace $ws8
 bindsym $mod+9		workspace $ws9
 bindsym $mod+0		workspace $ws10
-# bindsym $mod+F1		exec --no-startup-id groff -mom ${XDG_DATA_HOME:-$HOME/.local/share}/larbs/readme.mom -Tpdf | zathura -
+bindsym $mod+F1		exec --no-startup-id hdmi-layout
 bindsym $mod+F2		restart
 bindsym $mod+F3		exec --no-startup-id displayselect
 bindsym $mod+F4		exec --no-startup-id prompt "Hibernate computer?" "$hibernate"

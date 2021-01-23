@@ -29,7 +29,7 @@ IndentCaseLabels: 'true'
 IndentWidth: '2'
 IndentWrappedFunctionNames: 'true'
 KeepEmptyLinesAtTheStartOfBlocks: 'true'
-NamespaceIndentation: Inner
+NamespaceIndentation: All
 PointerAlignment: Left
 SortIncludes: 'true'
 SortUsingDeclarations: 'true'
