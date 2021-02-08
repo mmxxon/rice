@@ -19,16 +19,16 @@ set $ws8 "8: Games"
 set $ws9 "9: Music"
 set $ws10 "10: Waiting"
 
-workspace "1"           output eDP
-workspace "2"           output eDP
-workspace "3"           output eDP
-workspace "4"           output eDP
-workspace "5"           output eDP
-workspace "6"           output eDP
-workspace "7"           output eDP
-workspace "8: Games"    output HDMI-A-0
-workspace "9: Music"    output HDMI-A-0
-workspace "10: Waiting" output HDMI-A-0
+workspace "1"           output eDP-1
+workspace "2"           output eDP-1
+workspace "3"           output eDP-1
+workspace "4"           output eDP-1
+workspace "5"           output eDP-1
+workspace "6"           output eDP-1
+workspace "7"           output eDP-1
+workspace "8: Games"    output HDMI-1
+workspace "9: Music"    output HDMI-1
+workspace "10: Waiting" output HDMI-1
 
 set $inner_gaps 10
 set $outer_gaps 0
@@ -272,3 +272,4 @@ bindsym $mod+Left											exec --no-startup-id playerctl position 10-
 bindsym $mod+Right										exec --no-startup-id playerctl position 10+
 
 exec_always --no-startup-id xkb-switch --i3
+exec_always --no-startup-id hdmi-layout

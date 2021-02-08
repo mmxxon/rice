@@ -4,7 +4,7 @@
 export GPG_TTY="$(tty)"
 export EDITOR="nvim"
 export TERMINAL="st"
-export BROWSER="waterfox-current"
+export BROWSER="firefox"
 export READER="zathura"
 
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -33,7 +33,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 
 export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':')"
 export PATH="$PYENV_ROOT/bin:$PATH"
-export PATH="$PATH:$HOME/.local/share/cargo/bin"
+export PATH="$PATH:$HOME/.local/share/cargo/bin:$HOME/.gem/ruby/2.7.0/bin"
 
 # Other program settings:
 export DICS="/usr/share/stardict/dic/"
@@ -126,5 +126,6 @@ ex=🎯:\
 *.jar=♨:\
 *.java=♨:\
 "
+
 
 [ "$(tty)" = "/dev/tty1" ] && ! pidof Xorg >/dev/null 2>&1  && exec startx

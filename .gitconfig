@@ -4,8 +4,12 @@
     name = Maksym Movchan
     username = xon
     signingkey = xon.dev@protonmail.com
-[credential]
+[credential "https://github.com/xon-personal"]
     helper = libsecret
+    username = xon-personal
+[credential "https://github.com/xon-dev"]
+    helper = libsecret
+    username = xon-dev
 [core]
     editor = nvim
     excludesfile = ~/.gitignore
@@ -45,6 +49,7 @@
 [commit]
     cleanup = strip
     template = ~/.gitmessage
+	gpgsign = yes
 [committer]
     name = Maksym Movchan
 
@@ -79,3 +84,5 @@
     required = true
 [gpg]
     program = gpg2
+[credential "https://github.com"]
+	helper = !gh auth git-credential

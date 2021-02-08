@@ -11,7 +11,7 @@ main(){
 		[ ! "$stat" = "" ] && [ ! "$(cat $link)" = "0" ] && echo 0 > $link
 
 		local value="$stat $cap$warn"
-		local before="<span color='$gra' bgcolor='$bla'>$lua</span>"
+		# local before="<span color='$gra' bgcolor='$bla'>$lua</span>"
 		local text="<span color='$gra' bgcolor='$bla'> $value </span>"
 		[ ! "$value" == "" ] && echo -e " $before$text"
 	done | sed 's/ *$//'

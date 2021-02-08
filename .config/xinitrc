@@ -2,9 +2,9 @@
 
 # xinitrc runs automatically when you run startx.
 
+source '/etc/X11/xinit/xinitrc.d/50-systemd-user.sh'
 export STATUSBAR="i3blocks" # Uncomment this line when using i3.
 
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/xprofile" ] && . "${XDG_CONFIG_HOME:-$HOME/.config}/xprofile"
 
-hdmi-layout &
 ssh-agent i3

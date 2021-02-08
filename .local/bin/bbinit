@@ -1,3 +1,4 @@
+#!/bin/sh
 # Initialising new bitbucket repo
 
 echo 'Username?'

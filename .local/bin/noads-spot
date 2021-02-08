@@ -1,2 +1,2 @@
-	#!/bin/bash
-	[ -f /usr/local/lib/spotify-adblock.so ] && LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify || echo 'Not found library'
+#!/bin/sh
+[ -f /usr/local/lib/spotify-adblock.so ] && LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify || echo 'Not found library'
