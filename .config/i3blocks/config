@@ -36,9 +36,9 @@ signal=3
 [min]
 interval=3
 
-[wea]
-interval=180
-signal=4
+# [wea]
+# interval=180
+# signal=4
 
 [tim]
 interval=1
@@ -46,6 +46,10 @@ interval=1
 [xkb]
 interval=1
 signal=5
+
+[vol]
+interval=1
+signal=6
 
 [bat]
 interval=1

@@ -25,3 +25,4 @@ setbg &			# set the background with the `setbg` script
 mpDris2 &
 libinput-gestures-setup start&
 xss-lock i3lock-fancy&
+udiskie &

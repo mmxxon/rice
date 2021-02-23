@@ -86,3 +86,5 @@
     program = gpg2
 [credential "https://github.com"]
 	helper = !gh auth git-credential
+[rerere]
+	enabled = true

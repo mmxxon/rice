@@ -8,6 +8,7 @@ set -o noclobber
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
 # Enable colors and change prompt:
 
 # History in cache directory:
@@ -83,16 +84,16 @@ bindkey '^T' history-incremental-search-forward
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
-autoload -Uz promptinit
-promptinit
-prompt powerlevel10k
-
 # Load syntax highlighting; should be last.
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
+
+# Load autoswitch virtualenv
+source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/autoswitch_virtualenv.plugin.zsh"
 
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+
 if command -v pip 1>/dev/null 2>&1; then
   eval "`pip completion --zsh`"
   compctl -K _pip_completion pip3
@@ -100,3 +101,4 @@ fi
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+[[ ! -f ~/.config/zsh/powerlevel10k/powerlevel10k.zsh-theme ]] || source ~/.config/zsh/powerlevel10k/powerlevel10k.zsh-theme

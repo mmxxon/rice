@@ -7,7 +7,7 @@ main(){
 		cap=$(cat "$bat"/capacity 2>/dev/null) || break
 		stat=$(sed "s/[Dd]ischarging//;s/[Nn]ot charging//;s/[Cc]harging//;s/[Uu]nknown//;s/[Ff]ull//" "$bat"/status)
 
-		[ "$cap" -le 25 ] && [ "$stat" = "" ] && local warn=" " && [ "$(cat $link)" = "0" ] && echo 1 > $link && $(mpv "/home/xon/music/sounds/1.mp3" &> /dev/null &)
+		[ "$cap" -le 25 ] && [ "$stat" = "" ] && local warn=" " && [ "$(cat $link)" = "0" ] && echo 1 > $link && $(mpv "/home/xon/music/sounds/lowbat.mp3" &> /dev/null &)
 		[ ! "$stat" = "" ] && [ ! "$(cat $link)" = "0" ] && echo 0 > $link
 
 		local value="$stat $cap$warn"

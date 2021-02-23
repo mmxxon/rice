@@ -107,7 +107,8 @@ bindsym $mod+c			exec --no-startup-id cabl
 bindsym $mod+v			exec --no-startup-id setbg
 bindsym $mod+b			bar mode toggle
 #bindsym $mod+n			exec --no-startup-id notify-send "$(khal list -f '' -df '{bold}{name}' today today)" "$(khal list -f '{title}' -df '' today today)"
-bindsym $mod+m			exec --no-startup-id $term -e ncmpcpp
+# bindsym $mod+m			exec --no-startup-id $term -e ncmpcpp
+bindsym $mod+m			exec --no-startup-id noads-spot
 bindsym $mod+Home		workspace $ws1
 bindsym $mod+End		workspace $ws10
 bindsym $mod+Prior	workspace prev
@@ -141,8 +142,8 @@ bindsym $mod+F11	exec --no-startup-id ducksearch
 bindsym $mod+F12	exec $term -e nmtui
 bindsym $mod+Up			focus up
 bindsym $mod+Down		focus down
-bindsym $mod+plus		exec --no-startup-id pulsemixer --change-volume +5
-bindsym $mod+minus		exec --no-startup-id pulsemixer --change-volume -5
+bindsym $mod+plus		exec --no-startup-id pulsemixer --change-volume +5 && pkill -SIGRTMIN+6 ${STATUSBAR:-i3blocks}
+bindsym $mod+minus		exec --no-startup-id pulsemixer --change-volume -5 && pkill -SIGRTMIN+6 ${STATUSBAR:-i3blocks}
 bindsym $mod+less		exec --no-startup-id playerctl previous
 bindsym $mod+greater		exec --no-startup-id playerctl next
 bindsym $mod+bracketleft	exec --no-startup-id playerctl position 10-
@@ -183,92 +184,92 @@ bindsym $mod+Shift+h		move left 30
 bindsym $mod+Shift+j		move down 30
 bindsym $mod+Shift+k		move up 30
 bindsym $mod+Shift+l		move right 30
-bindsym $mod+Shift+z		gaps outer current minus 5
-bindsym $mod+Shift+x		exec --no-startup-id prompt "Shutdown computer?" "$shutdown"
-bindsym $mod+Shift+c		exec --no-startup-id camtoggle
-bindsym $mod+Shift+v    exec --no-startup-id mcrcon  -H 34.107.17.22 -p XonG0d time set day
-bindsym $mod+Shift+b		floating toggle; sticky toggle; exec --no-startup-id hover left
-bindsym $mod+Shift+n		floating toggle; sticky toggle; exec --no-startup-id hover right
-bindsym $mod+Shift+m		exec --no-startup-id pulsemixer --toggle-mute
-bindsym $mod+Shift+Home		move container to workspace $ws1
-bindsym $mod+Shift+End		move container to workspace $ws10
-bindsym $mod+Shift+Prior	move container to workspace prev
-bindsym $mod+Shift+Next		move container to workspace next
+bindsym $mod+Shift+z		    gaps outer current minus 5
+bindsym $mod+Shift+x		    exec --no-startup-id prompt "Shutdown computer?" "$shutdown"
+bindsym $mod+Shift+c		    exec --no-startup-id camtoggle
+bindsym $mod+Shift+v            exec --no-startup-id mcrcon  -H 34.107.17.22 -p XonG0d time set day
+bindsym $mod+Shift+b		    floating toggle; sticky toggle; exec --no-startup-id hover left
+bindsym $mod+Shift+n		    floating toggle; sticky toggle; exec --no-startup-id hover right
+bindsym $mod+Shift+m		    exec --no-startup-id pulsemixer --toggle-mute && pkill -SIGRTMIN+6 ${STATUSBAR:-i3blocks}
+bindsym $mod+Shift+Home		    move container to workspace $ws1
+bindsym $mod+Shift+End		    move container to workspace $ws10
+bindsym $mod+Shift+Prior	    move container to workspace prev
+bindsym $mod+Shift+Next		    move container to workspace next
 bindsym $mod+Shift+apostrophe	split horizontal ;; exec --no-startup-id samedir
-bindsym $mod+Shift+slash	split vertical ;; exec --no-startup-id samedir
+bindsym $mod+Shift+slash	    split vertical ;; exec --no-startup-id samedir
 
-bindsym $mod+Shift+1	move container to workspace $ws1
-bindsym $mod+Shift+2	move container to workspace $ws2
-bindsym $mod+Shift+3	move container to workspace $ws3
-bindsym $mod+Shift+4	move container to workspace $ws4
-bindsym $mod+Shift+5	move container to workspace $ws5
-bindsym $mod+Shift+6	move container to workspace $ws6
-bindsym $mod+Shift+7	move container to workspace $ws7
-bindsym $mod+Shift+8	move container to workspace $ws8
-bindsym $mod+Shift+9	move container to workspace $ws9
-bindsym $mod+Shift+0	move container to workspace $ws10
-bindsym $mod+Shift+Up		move up
-bindsym $mod+Shift+Down		move down
-bindsym $mod+Shift+Left		move left
-bindsym $mod+Shift+Right	move right
-bindsym $mod+Shift+plus		exec --no-startup-id pulsemixer --change-volume +10
-bindsym $mod+Shift+minus	exec --no-startup-id pulsemixer --change-volume -10
-bindsym $mod+Shift+less		exec --no-startup-id playerctl position 0
+bindsym $mod+Shift+1	    move container to workspace $ws1
+bindsym $mod+Shift+2	    move container to workspace $ws2
+bindsym $mod+Shift+3	    move container to workspace $ws3
+bindsym $mod+Shift+4	    move container to workspace $ws4
+bindsym $mod+Shift+5	    move container to workspace $ws5
+bindsym $mod+Shift+6	    move container to workspace $ws6
+bindsym $mod+Shift+7	    move container to workspace $ws7
+bindsym $mod+Shift+8	    move container to workspace $ws8
+bindsym $mod+Shift+9	    move container to workspace $ws9
+bindsym $mod+Shift+0	    move container to workspace $ws10
+bindsym $mod+Shift+Up		    move up
+bindsym $mod+Shift+Down		    move down
+bindsym $mod+Shift+Left		    move left
+bindsym $mod+Shift+Right	    move right
+bindsym $mod+Shift+plus		    exec --no-startup-id pulsemixer --change-volume +10 && pkill -SIGRTMIN+6 ${STATUSBAR:-i3blocks}
+bindsym $mod+Shift+minus	    exec --no-startup-id pulsemixer --change-volume -10 && pkill -SIGRTMIN+6 ${STATUSBAR:-i3blocks}
+bindsym $mod+Shift+less		    exec --no-startup-id playerctl position 0
 bindsym $mod+Shift+bracketleft	exec --no-startup-id playerctl position 120-
 bindsym $mod+Shift+bracketright exec --no-startup-id playerctl position 120+
-bindsym Shift+Print		exec --no-startup-id maimpick
+bindsym Shift+Print		        exec --no-startup-id maimpick
 
 # ---- Ctrl ----
-bindsym $mod+Ctrl+h		move workspace to output left
-bindsym $mod+Ctrl+j		move workspace to output down
-bindsym $mod+Ctrl+k		move workspace to output up
-bindsym $mod+Ctrl+l		move workspace to output right
+bindsym $mod+Ctrl+h		    move workspace to output left
+bindsym $mod+Ctrl+j		    move workspace to output down
+bindsym $mod+Ctrl+k		    move workspace to output up
+bindsym $mod+Ctrl+l		    move workspace to output right
 bindsym $mod+Ctrl+Up		move workspace to output up
 bindsym $mod+Ctrl+Down		move workspace to output down
 bindsym $mod+Ctrl+Left		move workspace to output left
 bindsym $mod+Ctrl+Right		move workspace to output right
-bindsym $mod+Ctrl+plus		exec --no-startup-id pulsemixer --change-volume +1
-bindsym $mod+Ctrl+minus	exec --no-startup-id pulsemixer --change-volume -1
+bindsym $mod+Ctrl+plus		exec --no-startup-id pulsemixer --change-volume +1 && pkill -SIGRTMIN+6 ${STATUSBAR:-i3blocks}
+bindsym $mod+Ctrl+minus	    exec --no-startup-id pulsemixer --change-volume -1 && pkill -SIGRTMIN+6 ${STATUSBAR:-i3blocks}
 
 # #---Extra XF86 Keys---# #
 bindsym XF86Launch1										exec --no-startup-id xset dpms force off
-bindsym XF86AudioMute									exec --no-startup-id pulsemixer --toggle-mute
-bindsym XF86AudioLowerVolume					exec --no-startup-id pulsemixer --change-volume -5
-bindsym Shift+XF86AudioLowerVolume		exec --no-startup-id pulsemixer --change-volume -10
-bindsym Control+XF86AudioLowerVolume	exec --no-startup-id pulsemixer --change-volume -1
-bindsym XF86AudioRaiseVolume					exec --no-startup-id pulsemixer --change-volume +5
-bindsym Shift+XF86AudioRaiseVolume		exec --no-startup-id pulsemixer --change-volume +10
-bindsym Control+XF86AudioRaiseVolume	exec --no-startup-id pulsemixer --change-volume +1
+bindsym XF86AudioMute									exec --no-startup-id pulsemixer --toggle-mute && pkill -SIGRTMIN+6 ${STATUSBAR:-i3blocks}
+bindsym XF86AudioLowerVolume					        exec --no-startup-id pulsemixer --change-volume -5 && pkill -SIGRTMIN+6 ${STATUSBAR:-i3blocks}
+bindsym Shift+XF86AudioLowerVolume		                exec --no-startup-id pulsemixer --change-volume -10 && pkill -SIGRTMIN+6 ${STATUSBAR:-i3blocks}
+bindsym Control+XF86AudioLowerVolume	                exec --no-startup-id pulsemixer --change-volume -1 && pkill -SIGRTMIN+6 ${STATUSBAR:-i3blocks}
+bindsym XF86AudioRaiseVolume					        exec --no-startup-id pulsemixer --change-volume +5 && pkill -SIGRTMIN+6 ${STATUSBAR:-i3blocks}
+bindsym Shift+XF86AudioRaiseVolume		                exec --no-startup-id pulsemixer --change-volume +10 && pkill -SIGRTMIN+6 ${STATUSBAR:-i3blocks}
+bindsym Control+XF86AudioRaiseVolume	                exec --no-startup-id pulsemixer --change-volume +1 && pkill -SIGRTMIN+6 ${STATUSBAR:-i3blocks}
 bindsym XF86PowerOff									exec --no-startup-id prompt "Shutdown computer?" "$shutdown"
-bindsym XF86Calculator								exec --no-startup-id ddspawn dropdowncalc -f mono:pixelsize=24
+bindsym XF86Calculator								    exec --no-startup-id ddspawn dropdowncalc -f mono:pixelsize=24
 bindsym XF86Explorer									exec $term -e lf
-bindsym XF86WWW												exec --no-startup-id $BROWSER
-bindsym XF86ScreenSaver								exec exec --no-startup-id i3lock-fancy
-bindsym XF86MyComputer								exec $term -e lf
+bindsym XF86WWW											exec --no-startup-id $BROWSER
+bindsym XF86ScreenSaver								    exec --no-startup-id i3lock-fancy
+bindsym XF86MyComputer								    exec $term -e lf
 bindsym XF86AudioNext									exec --no-startup-id playerctl next
 bindsym XF86AudioPlay									exec --no-startup-id playerctl play-pause
 bindsym XF86AudioPrev									exec --no-startup-id playerctl previous
-bindsym XF86Eject											exec --no-startup-id playerctl stop
-bindsym XF86AudioRewind								exec --no-startup-id playerctl position 10-
-bindsym XF86AudioForward							exec --no-startup-id playerctl position 10+
+bindsym XF86Eject										exec --no-startup-id playerctl stop
+bindsym XF86AudioRewind								    exec --no-startup-id playerctl position 10-
+bindsym XF86AudioForward							    exec --no-startup-id playerctl position 10+
 bindsym XF86HomePage									exec $BROWSER https://github.com/xon-dev/
 bindsym XF86Reload										restart
-bindsym XF86TouchpadToggle						exec --no-startup-id toggletouchpad
-bindsym XF86TouchpadOn								exec --no-startup-id synclient TouchpadOff=0
-bindsym XF86TouchpadOff								exec --no-startup-id synclient TouchpadOff=1
+bindsym XF86TouchpadToggle						        exec --no-startup-id toggletouchpad
+bindsym XF86TouchpadOn								    exec --no-startup-id synclient TouchpadOff=0
+bindsym XF86TouchpadOff								    exec --no-startup-id synclient TouchpadOff=1
 bindsym XF86Suspend										exec --no-startup-id i3lock-fancy
-bindsym XF86Close											kill
+bindsym XF86Close										kill
 bindsym XF86WebCam										exec --no-startup-id camtoggle
-bindsym XF86Mail											exec $term -e neomutt
+bindsym XF86Mail										exec $term -e neomutt
 bindsym XF86Messenger									exec $term -e weechat
 bindsym XF86Search										exec $BROWSER https://duckduckgo.com
-bindsym XF86MonBrightnessDown					exec --no-startup-id brightnessctl set 15%-
-bindsym XF86MonBrightnessUp						exec --no-startup-id brightnessctl set 15%+
-bindsym XF86AudioMedia								exec --no-startup-id $term -e ncmpcpp
+bindsym XF86MonBrightnessDown					        exec --no-startup-id brightnessctl set 15%-
+bindsym XF86MonBrightnessUp						        exec --no-startup-id brightnessctl set 15%+
+bindsym XF86AudioMedia								    exec --no-startup-id noads-spot
 bindsym XF86Display										exec --no-startup-id displayselect
 bindsym XF86Documents									exec $term -e lf ~/docs
-bindsym XF86WLAN											exec $netrefresh
-bindsym $mod+Left											exec --no-startup-id playerctl position 10-
+bindsym XF86WLAN										exec $netrefresh
+bindsym $mod+Left										exec --no-startup-id playerctl position 10-
 bindsym $mod+Right										exec --no-startup-id playerctl position 10+
 
 exec_always --no-startup-id xkb-switch --i3
