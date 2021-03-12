@@ -3,7 +3,7 @@
 # confirmations, etc.) must go above this block; everything else may go below.
 precmd () { print -Pn "\e]2;%~\a" }
 setopt autocd		# Automatically cd into typed directory.
-set -o noclobber
+setopt clobber
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -99,6 +99,9 @@ if command -v pip 1>/dev/null 2>&1; then
   compctl -K _pip_completion pip3
 fi
 
+autoload -Uz promptinit
+promptinit
+prompt powerlevel10k
+
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
-[[ ! -f ~/.config/zsh/powerlevel10k/powerlevel10k.zsh-theme ]] || source ~/.config/zsh/powerlevel10k/powerlevel10k.zsh-theme
