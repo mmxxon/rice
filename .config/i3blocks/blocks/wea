@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 link="${XDG_DATA_HOME:-$HOME/.local/share}/tmp/wea"
 

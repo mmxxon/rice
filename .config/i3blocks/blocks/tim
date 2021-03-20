@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 main() {
     local value=" $(date '+%y-%m-%d')"
@@ -10,7 +10,7 @@ main() {
     local text2="<span color='$bla' bgcolor='$mag'> $value2 </span>"
     local after2="<span color='$red' bgcolor='$mag'></span>"
     local text3="<span color='$bla' bgcolor='$red'> $value3 </span>"
-    local after3="<span color='$bla' bgcolor='$red'>$lf</span>"
+    local after3="<span color='$bla' bgcolor='$red'>$lfa</span>"
 
     [ ! "$value" == "" ] && echo -e "$before$text$after$text2$after2$text3$after3"
 

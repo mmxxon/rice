@@ -107,8 +107,8 @@ bindsym $mod+c			exec --no-startup-id cabl
 bindsym $mod+v			exec --no-startup-id setbg
 bindsym $mod+b			bar mode toggle
 #bindsym $mod+n			exec --no-startup-id notify-send "$(khal list -f '' -df '{bold}{name}' today today)" "$(khal list -f '{title}' -df '' today today)"
-# bindsym $mod+m			exec --no-startup-id $term -e ncmpcpp
-bindsym $mod+m			exec --no-startup-id noads-spot
+bindsym $mod+m			exec --no-startup-id $term -e ncmpcpp
+# bindsym $mod+m			exec --no-startup-id noads-spot
 bindsym $mod+Home		workspace $ws1
 bindsym $mod+End		workspace $ws10
 bindsym $mod+Prior	workspace prev
@@ -153,7 +153,7 @@ bindsym $mod+Print		exec --no-startup-id dmenurecord
 bindsym $mod+Delete		exec --no-startup-id dmenurecord kill
 
 # ---- Shift ----
-bindsym $mod+Shift+Return	exec --no-startup-id st -d "`xcwd`"
+bindsym $mod+Shift+Return	exec --no-startup-id samedir
 bindsym $mod+Shift+space	floating toggle
 bindsym $mod+Shift+Escape	exec --no-startup-id prompt "Exit i3?" "i3 exit"
 #bindsym $mod+Shift+grave
@@ -173,7 +173,7 @@ bindsym $mod+Shift+p		exec --no-startup-id playerctl pause
 bindsym $mod+Shift+a		exec $term -e pulsemixer
 bindsym $mod+Shift+s		gaps inner current minus 5
 bindsym $mod+Shift+d		gaps inner current set 0; gaps outer current set 0
-bindsym $mod+Shift+f		mode "$freeze" ;; exec --no-startup-id notify-send "dis-free mode activated" ;; exec --no-startup-id notify-send "DUNST_COMMAND_PAUSE"
+bindsym $mod+Shift+f		exec --no-startup-id notify-send "dis-free mode activated" ;; mode "$freeze" ;;exec --no-startup-id notify-send "DUNST_COMMAND_PAUSE"
 set $freeze !
 mode "$freeze" {
   bindsym $mod+Shift+F11 fullscreen toggle
@@ -195,8 +195,8 @@ bindsym $mod+Shift+Home		    move container to workspace $ws1
 bindsym $mod+Shift+End		    move container to workspace $ws10
 bindsym $mod+Shift+Prior	    move container to workspace prev
 bindsym $mod+Shift+Next		    move container to workspace next
-bindsym $mod+Shift+apostrophe	split horizontal ;; exec --no-startup-id st -d "`xcwd`"
-bindsym $mod+Shift+slash	    split vertical ;; exec --no-startup-id st -d "`xcwd`"
+bindsym $mod+Shift+apostrophe	split horizontal ;; exec --no-startup-id samedir
+bindsym $mod+Shift+slash	    split vertical ;; exec --no-startup-id samedir
 
 bindsym $mod+Shift+1	    move container to workspace $ws1
 bindsym $mod+Shift+2	    move container to workspace $ws2

@@ -1,5 +1,4 @@
 #!/bin/sh
 
-xset r rate 300 50
 setleds -D -caps # because caps is useless. <S-Caps> may work as normal.
 setxkbmap us,ru,ua -option grp:caps_toggle # My locales

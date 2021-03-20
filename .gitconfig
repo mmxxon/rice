@@ -4,12 +4,10 @@
     name = Maksym Movchan
     username = xon
     signingkey = xon.dev@protonmail.com
-[credential "https://github.com/xon-personal"]
-    helper = libsecret
-    username = xon-personal
-[credential "https://github.com/xon-dev"]
-    helper = libsecret
-    username = xon-dev
+[credential]
+	helper = libsecret
+[credential "https://github.com/"]
+	helper = libsecret
 [core]
     editor = nvim
     excludesfile = ~/.gitignore
@@ -88,3 +86,5 @@
 	helper = !gh auth git-credential
 [rerere]
 	enabled = true
+[tag]
+	gpgSign = 1

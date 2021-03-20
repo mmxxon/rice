@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 main() {
 	value=$([ -f /tmp/recordingicon ] && cat /tmp/recordingicon || echo "")

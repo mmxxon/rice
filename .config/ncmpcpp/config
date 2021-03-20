@@ -31,7 +31,7 @@ regular_expressions = "extended"
 mouse_list_scroll_whole_page = "no"
 # mouse_support = no
 browser_sort_mode = mtime
-lyrics_fetchers = genius, lyricwiki, azlyrics, sing365, lyricsmania, metrolyrics, justsomelyrics, jahlyrics, plyrics, tekstowo, internet
+lyrics_fetchers = genius, azlyrics, sing365, metrolyrics, justsomelyrics, jahlyrics, plyrics, tekstowo, internet
 
 colors_enabled = yes
 empty_tag_color = black

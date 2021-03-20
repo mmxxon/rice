@@ -1,6 +1,5 @@
 #!/bin/sh
 
-# wal -ni ~/pics/walls || exit 1
-# pacwall -WL -r 1.6 || exit 1
+wal -ni ~/pics/walls && pacwall -WL -r 1.6
 
-wal -i ~/pics/walls || exit 1
+# wal -i ~/pics/walls || exit 1
