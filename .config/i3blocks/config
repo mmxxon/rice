@@ -33,12 +33,12 @@ signal=2
 interval=once
 signal=3
 
-[min]
-interval=3
+# [min]
+# interval=3
 
-# [wea]
-# interval=180
-# signal=4
+[wea]
+interval=180
+signal=4
 
 [tim]
 interval=1

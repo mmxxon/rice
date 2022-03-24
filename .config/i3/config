@@ -107,8 +107,8 @@ bindsym $mod+c			exec --no-startup-id cabl
 bindsym $mod+v			exec --no-startup-id setbg
 bindsym $mod+b			bar mode toggle
 #bindsym $mod+n			exec --no-startup-id notify-send "$(khal list -f '' -df '{bold}{name}' today today)" "$(khal list -f '{title}' -df '' today today)"
-bindsym $mod+m			exec --no-startup-id $term -e ncmpcpp
-# bindsym $mod+m			exec --no-startup-id noads-spot
+# bindsym $mod+m			exec --no-startup-id $term -e ncmpcpp
+bindsym $mod+m			exec --no-startup-id noads-spot
 bindsym $mod+Home		workspace $ws1
 bindsym $mod+End		workspace $ws10
 bindsym $mod+Prior	workspace prev
