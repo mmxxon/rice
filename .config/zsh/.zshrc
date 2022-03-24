@@ -4,6 +4,7 @@
 precmd () { print -Pn "\e]2;%~\a" }
 setopt autocd		# Automatically cd into typed directory.
 setopt clobber
+export GPG_TTY=$(tty)
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -88,7 +89,7 @@ bindkey '^e' edit-command-line
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
 
 # Load autoswitch virtualenv
-source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/autoswitch_virtualenv.plugin.zsh"
+source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zsh-autoswitch-virtualenv/autoswitch_virtualenv.plugin.zsh"
 
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
@@ -99,9 +100,7 @@ if command -v pip 1>/dev/null 2>&1; then
   compctl -K _pip_completion pip3
 fi
 
-autoload -Uz promptinit
-promptinit
-prompt powerlevel10k
+source ~/.config/zsh/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

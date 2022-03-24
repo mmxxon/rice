@@ -34,7 +34,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 
 export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':')"
 export PATH="$PYENV_ROOT/bin:$PATH"
-export PATH="$PATH:$HOME/.local/share/cargo/bin:$HOME/.gem/ruby/2.7.0/bin"
+export PATH="$PATH:$HOME/.local/share/cargo/bin:$HOME/.local/share/gem/ruby/3.0.0/bin"
 
 # Other program settings:
 export DICS="/usr/share/stardict/dic/"
