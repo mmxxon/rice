@@ -4,7 +4,7 @@
 export GPG_TTY="$(tty)"
 export EDITOR="nvim"
 export TERMINAL="st"
-export BROWSER="firefox"
+export BROWSER="chromium"
 export READER="zathura"
 export EDITOR="/usr/bin/nvim"
 
@@ -129,4 +129,4 @@ ex=🎯:\
 "
 
 
-[ "$(tty)" = "/dev/tty1" ] && ! pidof Xorg >/dev/null 2>&1  && exec startx
+[ "$(tty)" = "/dev/tty1" ] && ! pidof Xorg >/dev/null 2>&1 && exec startx

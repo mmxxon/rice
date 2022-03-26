@@ -102,7 +102,7 @@ bindsym $mod+j			focus down
 bindsym $mod+k			focus up
 bindsym $mod+l			focus right
 bindsym $mod+z			gaps outer current plus 5
-bindsym $mod+x			exec --no-startup-id playerctl -a pause ;; exec --no-startup-id i3lock-fancy
+bindsym $mod+x			exec --no-startup-id playerctl -a pause ;; exec --no-startup-id i3lock-fancy -- maim
 bindsym $mod+c			exec --no-startup-id cabl
 bindsym $mod+v			exec --no-startup-id setbg
 bindsym $mod+b			bar mode toggle
@@ -128,6 +128,25 @@ bindsym $mod+7		workspace $ws7
 bindsym $mod+8		workspace $ws8
 bindsym $mod+9		workspace $ws9
 bindsym $mod+0		workspace $ws10
+bindsym $mod+mod2+KP_1 workspace $ws1
+bindsym $mod+mod2+KP_2 workspace $ws2
+bindsym $mod+mod2+KP_3 workspace $ws3
+bindsym $mod+mod2+KP_4 workspace $ws4
+bindsym $mod+mod2+KP_5 workspace $ws5
+bindsym $mod+mod2+KP_6 workspace $ws6
+bindsym $mod+mod2+KP_7 workspace $ws7
+bindsym $mod+mod2+KP_8 workspace $ws8
+bindsym $mod+mod2+KP_0 workspace $ws10
+bindsym $mod+KP_1 workspace $ws1
+bindsym $mod+KP_2 workspace $ws2
+bindsym $mod+KP_3 workspace $ws3
+bindsym $mod+KP_4 workspace $ws4
+bindsym $mod+KP_5 workspace $ws5
+bindsym $mod+KP_6 workspace $ws6
+bindsym $mod+KP_7 workspace $ws7
+bindsym $mod+KP_8 workspace $ws8
+bindsym $mod+KP_9 workspace $ws9
+bindsym $mod+KP_0 workspace $ws10
 bindsym $mod+F1		exec --no-startup-id hdmi-layout
 bindsym $mod+F2		restart
 bindsym $mod+F3		exec --no-startup-id displayselect
@@ -173,11 +192,11 @@ bindsym $mod+Shift+p		exec --no-startup-id playerctl pause
 bindsym $mod+Shift+a		exec $term -e pulsemixer
 bindsym $mod+Shift+s		gaps inner current minus 5
 bindsym $mod+Shift+d		gaps inner current set 0; gaps outer current set 0
-bindsym $mod+Shift+f		exec --no-startup-id notify-send "dis-free mode activated" ;; mode "$freeze" ;;exec --no-startup-id notify-send "DUNST_COMMAND_PAUSE"
+bindsym $mod+Shift+f		exec --no-startup-id notify-send "dis-free mode activated" ;; mode "$freeze" ;; exec --no-startup-id dunstctl set-paused true
 set $freeze !
 mode "$freeze" {
   bindsym $mod+Shift+F11 fullscreen toggle
-  bindsym $mod+Shift+f mode "default" ;; exec --no-startup-id notify-send "DUNST_COMMAND_RESUME"
+  bindsym $mod+Shift+f mode "default" ;; exec --no-startup-id dunstctl set-paused false
 }
 bindsym $mod+Shift+g		exec --no-startup-id gimp; workspace $ws5
 bindsym $mod+Shift+h		move left 30

@@ -81,6 +81,8 @@ bindkey '^R' history-incremental-search-backward
 
 bindkey '^T' history-incremental-search-forward
 
+bindkey -M menuselect '^[[Z' reverse-menu-complete
+
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
@@ -101,6 +103,7 @@ if command -v pip 1>/dev/null 2>&1; then
 fi
 
 source ~/.config/zsh/powerlevel10k/powerlevel10k.zsh-theme
+source /usr/share/nvm/init-nvm.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

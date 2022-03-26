@@ -56,3 +56,6 @@ signal=5
 
 [bat]
 interval=1
+
+[wifi]
+interval=5
